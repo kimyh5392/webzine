@@ -1,0 +1,518 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import url("https://cdn.jsdelivr.net/gh/leetaewook/gmarket-sans-dynamic-subset/GmarketSans.css");
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal; }
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, etails, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button, hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: inherit; }
+
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, hr {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  min-width: 360px;
+  width: 100%;
+  font-size: 18px;
+  color: #555;
+  line-height: 1;
+  font-weight: 400;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  word-break: keep-all;
+  box-sizing: border-box; }
+  body *, body *::before, body *::after {
+    box-sizing: border-box; }
+
+input, select, textarea {
+  font-family: inherit;
+  outline: none;
+  resize: none; }
+
+a, button {
+  color: #000;
+  border: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  background: none; }
+  a:hover, button:hover {
+    color: #000; }
+
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.container-fluid {
+  display: block;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+/* page-header */
+.page-header {
+  position: relative;
+  overflow: hidden; }
+  .page-header .vol {
+    position: absolute;
+    left: 60px;
+    bottom: 40px;
+    z-index: 2;
+    height: calc(100% - 154px); }
+    .page-header .vol .inner {
+      position: relative;
+      height: 100%; }
+      .page-header .vol .inner:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: calc(100% - 226px);
+        content: '';
+        background-color: #fff; }
+      .page-header .vol .inner > p {
+        position: absolute;
+        bottom: 96px;
+        left: -108px;
+        white-space: nowrap;
+        font-size: 18px;
+        font-weight: 300;
+        color: #fff;
+        font-family: 'Gmarket Sans';
+        transform: rotate(90deg); }
+        .page-header .vol .inner > p b {
+          font-weight: bold; }
+  .page-header .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 6s;
+    transition-duration: 6s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover; }
+  .page-header .container {
+    position: relative;
+    z-index: 1;
+    display: table;
+    font-family: 'S-CoreDream';
+    text-align: center;
+    height: 100vh; }
+    .page-header .container .v-align {
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle; }
+      .page-header .container .v-align small {
+        display: inline-block;
+        vertical-align: top;
+        height: 46px;
+        font-family: 'Gmarket Sans';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 48px;
+        padding: 0 20px;
+        border-radius: 100px;
+        border: 1px solid #fff; }
+      .page-header .container .v-align h3 {
+        font-size: 72px;
+        line-height: 96px;
+        font-weight: 300;
+        margin-top: 50px; }
+        .page-header .container .v-align h3 b {
+          font-weight: 600; }
+      .page-header .container .v-align p {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 36px;
+        margin-top: 20px; }
+      .page-header .container .v-align hr {
+        display: block;
+        border: 0;
+        width: 100px;
+        height: 1px;
+        margin: 40px auto;
+        background-color: #fff; }
+      .page-header .container .v-align span {
+        display: block;
+        font-size: 16px;
+        font-weight: 300; }
+        .page-header .container .v-align span b {
+          font-weight: 600; }
+        .page-header .container .v-align span br {
+          display: none; }
+  .page-header.show .backdrop {
+    transform: scale(1); }
+  @media (max-width: 1024px) {
+    .page-header .vol {
+      left: 26px;
+      bottom: 20px;
+      height: calc(100% - 90px); }
+      .page-header .vol .inner:before {
+        height: calc(100% - 210px); }
+      .page-header .vol .inner p {
+        left: -95px;
+        bottom: 86px;
+        font-size: 16px; }
+    .page-header .container .v-align small {
+      font-size: 12px;
+      height: 26px;
+      line-height: 26px;
+      padding: 0 10px; }
+    .page-header .container .v-align h3 {
+      font-size: 35px;
+      line-height: 48px;
+      margin-top: 15px; }
+    .page-header .container .v-align p {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 10px; }
+    .page-header .container .v-align hr {
+      margin: 30px auto; }
+    .page-header .container .v-align span {
+      font-size: 12px;
+      line-height: 18px; }
+      .page-header .container .v-align span br {
+        display: block; } }
+
+section {
+  padding: 100px 0 200px; }
+  @media (max-width: 1024px) {
+    section {
+      padding: 30px 0 100px; } }
+
+/* sub-1 */
+.sub-1 {
+  overflow: hidden; }
+
+.sub1-1 {
+  position: relative;
+  color: #000;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #ddd; }
+  .sub1-1 .rotate-txt {
+    position: absolute;
+    top: 0;
+    right: -177px; }
+    .sub1-1 .rotate-txt img {
+      display: block;
+      max-width: 100%; }
+  .sub1-1 > ul > li ~ li {
+    margin-top: 100px; }
+  .sub1-1 > ul > li .rotate-txt-sm {
+    display: none; }
+    .sub1-1 > ul > li .rotate-txt-sm img {
+      display: block;
+      width: 100%; }
+  .sub1-1 dt {
+    font-size: 30px;
+    font-weight: bold; }
+  .sub1-1 dd {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 30px;
+    letter-spacing: -1.3px; }
+    .sub1-1 dd .box {
+      display: table;
+      width: 100%;
+      height: 100%; }
+      .sub1-1 dd .box > div {
+        display: table-cell;
+        vertical-align: top;
+        height: 100%; }
+        .sub1-1 dd .box > div.item-img {
+          width: 500px; }
+          .sub1-1 dd .box > div.item-img > figure {
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            border-radius: 10px;
+            background-image: url(../images/sub/img_sub01_01.png);
+            background-repeat: no-repeat;
+            background-size: cover; }
+            .sub1-1 dd .box > div.item-img > figure img {
+              display: none;
+              max-width: 100%; }
+        .sub1-1 dd .box > div.details {
+          padding-left: 40px; }
+  .sub1-1 .figure-list {
+    display: table;
+    width: 100%;
+    margin-top: 80px; }
+    .sub1-1 .figure-list figure {
+      display: table-cell;
+      vertical-align: top; }
+      .sub1-1 .figure-list figure img {
+        display: block;
+        max-width: 100%; }
+      .sub1-1 .figure-list figure:first-child {
+        padding-right: 20px; }
+      .sub1-1 .figure-list figure:last-child {
+        padding-left: 20px; }
+  .sub1-1 .caption {
+    display: block;
+    font-size: 16px;
+    color: #6E6E6E;
+    line-height: 30px;
+    margin-top: 10px; }
+  @media (max-width: 1630px) {
+    .sub1-1 .rotate-txt {
+      display: none; } }
+  @media (max-width: 1024px) {
+    .sub1-1 {
+      padding-bottom: 40px; }
+      .sub1-1 > ul > li .rotate-txt-sm {
+        display: block;
+        margin-top: 20px; }
+      .sub1-1 > ul > li ~ li {
+        margin-top: 40px; }
+      .sub1-1 dt {
+        font-size: 20px; }
+      .sub1-1 dd {
+        font-size: 15px;
+        line-height: 23px;
+        margin-top: 20px; }
+        .sub1-1 dd .box {
+          display: block; }
+          .sub1-1 dd .box > div {
+            display: block;
+            width: 100% !important;
+            padding: 0 !important; }
+            .sub1-1 dd .box > div ~ div {
+              margin-top: 20px; }
+            .sub1-1 dd .box > div.item-img > figure {
+              background: none !important; }
+              .sub1-1 dd .box > div.item-img > figure img {
+                display: block;
+                width: 100%; }
+      .sub1-1 .figure-list {
+        display: block;
+        margin-top: 30px; }
+        .sub1-1 .figure-list > figure {
+          display: block;
+          padding: 0 !important; }
+          .sub1-1 .figure-list > figure img {
+            width: 100%; }
+          .sub1-1 .figure-list > figure ~ figure {
+            margin-top: 10px; }
+      .sub1-1 .caption {
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 5px; }
+        .sub1-1 .caption br {
+          display: none; } }
+
+.sub1-2 {
+  position: relative;
+  text-align: center;
+  padding: 100px 0; }
+  .sub1-2:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 500px;
+    height: 1px;
+    content: '';
+    transform: translateX(-50%);
+    background-color: #000000; }
+  .sub1-2 .article-header {
+    padding-bottom: 30px; }
+    .sub1-2 .article-header h3 {
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 56px;
+      color: #E62E8A; }
+  .sub1-2 .article-content > figure {
+    display: inline-block; }
+    .sub1-2 .article-content > figure img {
+      display: block;
+      max-width: 100%; }
+    .sub1-2 .article-content > figure figcaption {
+      font-size: 16px;
+      color: #6E6E6E;
+      text-align: left;
+      line-height: 21px;
+      margin-top: 10px; }
+      .sub1-2 .article-content > figure figcaption b {
+        font-weight: bold; }
+  .sub1-2 .article-content .summary {
+    text-align: left;
+    margin-top: 70px; }
+    .sub1-2 .article-content .summary p {
+      font-size: 20px;
+      line-height: 30px;
+      color: #000;
+      font-weight: 300;
+      letter-spacing: -1.3px; }
+  @media (max-width: 1024px) {
+    .sub1-2 {
+      padding: 40px 0; }
+      .sub1-2:after {
+        width: 100px; }
+      .sub1-2 .article-header {
+        padding-bottom: 20px; }
+        .sub1-2 .article-header h3 {
+          font-size: 26px;
+          line-height: 35px; }
+      .sub1-2 .article-content > figure figcaption {
+        font-size: 12px;
+        line-height: 18px; }
+      .sub1-2 .article-content .summary {
+        margin-top: 30px; }
+        .sub1-2 .article-content .summary p {
+          font-size: 15px;
+          line-height: 23px; } }
+
+.sub1-3 {
+  padding-top: 100px; }
+  .sub1-3 > ul > li ~ li {
+    margin-top: 100px; }
+  .sub1-3 > ul > li dt {
+    font-size: 30px;
+    line-height: 44px;
+    color: #000;
+    font-weight: bold; }
+  .sub1-3 > ul > li dd {
+    margin-top: 30px; }
+    .sub1-3 > ul > li dd .box {
+      display: table;
+      width: 100%;
+      table-layout: fixed; }
+      .sub1-3 > ul > li dd .box > div {
+        display: table-cell;
+        vertical-align: top; }
+        .sub1-3 > ul > li dd .box > div.item-img {
+          width: 500px; }
+          .sub1-3 > ul > li dd .box > div.item-img figure img {
+            display: block;
+            width: 100%; }
+        .sub1-3 > ul > li dd .box > div.details > ul > li b {
+          position: relative;
+          display: block;
+          font-size: 20px;
+          color: #000;
+          font-weight: bold;
+          padding-left: 30px;
+          line-height: 30px; }
+          .sub1-3 > ul > li dd .box > div.details > ul > li b img {
+            position: absolute;
+            top: 3px;
+            left: 0;
+            display: block;
+            max-width: 100%; }
+        .sub1-3 > ul > li dd .box > div.details > ul > li p {
+          font-size: 20px;
+          line-height: 30px;
+          color: #000;
+          font-weight: 300;
+          margin-top: 10px;
+          letter-spacing: -1.3px; }
+        .sub1-3 > ul > li dd .box > div.details > ul > li ~ li {
+          margin-top: 20px; }
+  .sub1-3 > ul > li:nth-of-type(2n + 1) .box .details {
+    padding-left: 40px; }
+  .sub1-3 > ul > li:nth-of-type(2n + 2) .box .details {
+    padding-right: 40px; }
+  @media (max-width: 1024px) {
+    .sub1-3 {
+      padding-top: 40px; }
+      .sub1-3 > ul > li dt {
+        font-size: 20px;
+        line-height: 27px; }
+      .sub1-3 > ul > li dd {
+        margin-top: 20px; }
+        .sub1-3 > ul > li dd .box {
+          display: block; }
+          .sub1-3 > ul > li dd .box > div {
+            display: block;
+            width: 100% !important;
+            padding: 0 !important; }
+            .sub1-3 > ul > li dd .box > div.details {
+              padding-top: 20px !important; }
+              .sub1-3 > ul > li dd .box > div.details > ul > li > b {
+                font-size: 15px;
+                line-height: 24px;
+                line-height: 20px;
+                padding-left: 26px; }
+                .sub1-3 > ul > li dd .box > div.details > ul > li > b img {
+                  top: -2px;
+                  max-width: 20px; }
+              .sub1-3 > ul > li dd .box > div.details > ul > li > p {
+                font-size: 15px;
+                line-height: 23px;
+                margin-top: 10px; }
+              .sub1-3 > ul > li dd .box > div.details > ul > li ~ li {
+                margin-top: 15px; }
+      .sub1-3 > ul > li ~ li {
+        margin-top: 60px; }
+      .sub1-3 > ul > li:nth-of-type(2n + 2) .box {
+        display: flex;
+        flex-direction: column-reverse; } }
+
+/*# sourceMappingURL=sub.css.map */

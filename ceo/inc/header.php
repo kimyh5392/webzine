@@ -11,9 +11,9 @@
                 <li>
                     <a href="#">Industry Spotlight</a>
                     <ul>
-                        <li><a href="#">Info</a></li>
-                        <li><a href="#">View&amp;voices</a></li>
-                        <li><a href="#">Flow</a></li>
+                        <li><a href="../ceo/sub04.php">Info</a></li>
+                        <li><a href="../ceo/sub01.php">View&amp;voices</a></li>
+                        <li><a href="../ceo/sub02.php">Flow</a></li>
                         <li><a href="#">Startup &amp; Tech</a></li>
                     </ul>
                 </li>
@@ -21,7 +21,7 @@
                     <a href="#">Business Context</a>
                     <ul>
                         <li><a href="#">Benchmark Talk</a></li>
-                        <li><a href="#">궁금한 이야기 Why?</a></li>
+                        <li><a href="../ceo/sub03.php">궁금한 이야기 Why?</a></li>
                         <li><a href="#">Global Shift</a></li>
                         <li><a href="#">Monthly Pick</a></li>
                     </ul>
@@ -65,9 +65,9 @@
                 <li>
                     <a href="javascript:;">Industry Spotlight</a>
                     <ul>
-                        <li><a href="#">Info</a></li>
-                        <li><a href="#">View&amp;voices</a></li>
-                        <li><a href="#">Flow</a></li>
+                        <li><a href="../ceo/sub04.php">Info</a></li>
+                        <li><a href="../ceo/sub01.php">View&amp;voices</a></li>
+                        <li><a href="../ceo/sub02.php">Flow</a></li>
                         <li><a href="#">Startup &amp; Tech</a></li>
                     </ul>
                 </li>
@@ -75,7 +75,7 @@
                     <a href="javascript:;">Business Context</a>
                     <ul>
                         <li><a href="#">Benchmark Talk</a></li>
-                        <li><a href="#">궁금한 이야기 Why?</a></li>
+                        <li><a href="../ceo/sub03.php">궁금한 이야기 Why?</a></li>
                         <li><a href="#">Global Shift</a></li>
                         <li><a href="#">Monthly Pick</a></li>
                     </ul>

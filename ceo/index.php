@@ -26,7 +26,7 @@
                                 <h3><b>AI 에이전트 기술,</b><br> 어디까지 왔나?</h3>
                                 <p>AI 에이전트는 지금 어디까지 왔고,<br> 우리는 어떤 미래를 준비해야 할까?</p>
                                 <div class="btn-area">
-                                    <a href="sub01.php" class="btn-more">자세히 보기 →</a>
+                                    <a href="./sub01.php" class="btn-more">자세히 보기 →</a>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                                 <h3><b>트럼프의 관세 집착,</b><br> 무엇을 노리는가?</h3>
                                 <p>트럼프 전 미국 대통령의 관세 집착은 단순한 무역정책이 아니라,<br>  미국 사회의 불안과 국제질서의 균열을 상징한다.</p>
                                 <div class="btn-area">
-                                    <a href="javascript:;" class="btn-more">자세히 보기 →</a>
+                                    <a href="./sub03.php" class="btn-more">자세히 보기 →</a>
                                 </div>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                                 <h3><b>KOREA AI</b><br> 글로벌 3강을 향한 도전</h3>
                                 <p>‘AI 글로벌 3강.’ 이재명 정부가 내세운 비전</p>
                                 <div class="btn-area">
-                                    <a href="javascript:;" class="btn-more">자세히 보기 →</a>
+                                    <a href="./sub02.php" class="btn-more">자세히 보기 →</a>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                                 <h3>It’s Hot,<br> <b>AI AGENT</b></h3>
                                 <p>우리는 어떤 미래를 준비해야 할까?</p>
                                 <div class="btn-area">
-                                    <a href="javascript:;" class="btn-more">자세히 보기 →</a>
+                                    <a href="./sub04.php" class="btn-more">자세히 보기 →</a>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                 <div class="section-content">
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="./sub04.php">
                                 <div class="backdrop" style="background-image: url(./assets/images/main/bg_industry_list01.png);"></div>
                                 <img src="./assets/images/main/img_industry_list01.png" alt="" class="visible-sm">
                                 <div class="summary">
@@ -102,7 +102,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./sub01.php">
                                 <div class="backdrop" style="background-image: url(./assets/images/main/bg_industry_list02.png);"></div>
                                 <img src="./assets/images/main/img_industry_list02.png" alt="" class="visible-sm">
                                 <div class="summary">
@@ -115,7 +115,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./sub02.php">
                                 <div class="backdrop" style="background-image: url(./assets/images/main/bg_industry_list03.png);"></div>
                                 <img src="./assets/images/main/img_industry_list03.png" alt="" class="visible-sm">
                                 <div class="summary">
@@ -155,7 +155,7 @@
                     <div class="business-slider swiper">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
-                                <a href="#">
+                                <a href="./sub03.php">
                                     <h4>Benchmark<br> Talk</h4>
                                     <figure>
                                         <img src="./assets/images/main/img_business01.png" alt="">
@@ -170,7 +170,7 @@
                                 </a>
                             </li>
                             <li class="swiper-slide">
-                                <a href="#">
+                                <a href="./sub03.php">
                                     <h4>궁금한 이야기<br> Why?</h4>
                                     <figure>
                                         <img src="./assets/images/main/img_business02.png" alt="">
@@ -181,7 +181,7 @@
                                 </a>
                             </li>
                             <li class="swiper-slide">
-                                <a href="#">
+                                <a href="./sub03.php">
                                     <h4>Global<br> Shift</h4>
                                     <figure>
                                         <img src="./assets/images/main/img_business03.png" alt="">
@@ -192,7 +192,7 @@
                                 </a>
                             </li>
                             <li class="swiper-slide">
-                                <a href="#">
+                                <a href="./sub03.php">
                                     <h4>Monthly<br> Pick</h4>
                                     <figure>
                                         <img src="./assets/images/main/img_business04.png" alt="">

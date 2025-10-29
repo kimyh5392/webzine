@@ -73,7 +73,8 @@ body {
   line-height: 1;
   font-weight: 400;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  word-break: keep-all;
+  /*word-break: keep-all;*/
+  word-break: break-all;
   box-sizing: border-box; }
   body *, body *::before, body *::after {
     box-sizing: border-box; }
@@ -169,6 +170,9 @@ a, button {
       display: table-cell;
       vertical-align: middle; }
       .page-header .container .v-align small {
+        position: relative;
+        top: 40px;
+        opacity: 0;
         display: inline-block;
         vertical-align: top;
         height: 46px;
@@ -178,36 +182,99 @@ a, button {
         line-height: 48px;
         padding: 0 20px;
         border-radius: 100px;
-        border: 1px solid #fff; }
+        border: 1px solid #fff;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        -webkit-transition-delay: 0.2s;
+        transition-delay: 0.2s; }
       .page-header .container .v-align h3 {
+        position: relative;
+        top: 40px;
+        opacity: 0;
         font-size: 72px;
         line-height: 96px;
         font-weight: 300;
-        margin-top: 50px; }
+        margin-top: 50px;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        -webkit-transition-delay: 0.3s;
+        transition-delay: 0.3s; }
         .page-header .container .v-align h3 b {
           font-weight: 600; }
       .page-header .container .v-align p {
+        position: relative;
+        top: 40px;
+        opacity: 0;
         font-size: 24px;
         font-weight: 300;
         line-height: 36px;
-        margin-top: 20px; }
+        margin-top: 20px;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        -webkit-transition-delay: 0.4s;
+        transition-delay: 0.4s; }
       .page-header .container .v-align hr {
         display: block;
         border: 0;
-        width: 100px;
+        width: 0;
         height: 1px;
         margin: 40px auto;
-        background-color: #fff; }
+        background-color: #fff;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        -webkit-transition-delay: 0.6s;
+        transition-delay: 0.6s; }
       .page-header .container .v-align span {
+        position: relative;
+        top: 40px;
+        opacity: 0;
         display: block;
         font-size: 16px;
-        font-weight: 300; }
+        font-weight: 300;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        -webkit-transition-delay: 0.8s;
+        transition-delay: 0.8s; }
         .page-header .container .v-align span b {
           font-weight: 600; }
         .page-header .container .v-align span br {
           display: none; }
   .page-header.show .backdrop {
     transform: scale(1); }
+  .page-header.show .container .v-align small {
+    top: 0;
+    opacity: 1; }
+  .page-header.show .container .v-align h3 {
+    top: 0;
+    opacity: 1; }
+  .page-header.show .container .v-align p {
+    top: 0;
+    opacity: 1; }
+  .page-header.show .container .v-align hr {
+    width: 100px; }
+  .page-header.show .container .v-align span {
+    top: 0;
+    opacity: 1; }
   @media (max-width: 1024px) {
     .page-header .vol {
       left: 26px;
@@ -238,7 +305,9 @@ a, button {
       font-size: 12px;
       line-height: 18px; }
       .page-header .container .v-align span br {
-        display: block; } }
+        display: block; }
+    .page-header.type-2 .backdrop {
+      background-position: 7% 50%; } }
 
 section {
   padding: 100px 0 200px; }
@@ -514,5 +583,680 @@ section {
       .sub1-3 > ul > li:nth-of-type(2n + 2) .box {
         display: flex;
         flex-direction: column-reverse; } }
+
+@keyframes rotate-image {
+  100% {
+    transform: rotate(360deg); } }
+/* sub-2 */
+.sub-2 {
+  overflow: hidden;
+  font-size: 20px;
+  color: #000;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: -1px; }
+  .sub-2 .top-summary {
+    text-align: center; }
+    .sub-2 .top-summary p {
+      font-weight: 600; }
+    .sub-2 .top-summary figure {
+      margin-top: 50px; }
+      .sub-2 .top-summary figure img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto; }
+  .sub-2 .strategy {
+    text-align: center;
+    margin-top: 80px; }
+    .sub-2 .strategy > dl > dt {
+      font-size: 30px;
+      color: #E62E8A;
+      font-weight: bold; }
+    .sub-2 .strategy > dl > dd {
+      margin-top: 30px; }
+      .sub-2 .strategy > dl > dd b {
+        display: block;
+        font-size: 24px;
+        color: #000;
+        font-weight: bold;
+        line-height: 28px; }
+      .sub-2 .strategy > dl > dd .process {
+        position: relative;
+        display: inline-block;
+        font-size: 0;
+        margin-top: 30px; }
+        .sub-2 .strategy > dl > dd .process img {
+          position: relative;
+          z-index: 2;
+          display: block;
+          max-width: 100%; }
+          .sub-2 .strategy > dl > dd .process img.img-rotate {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            animation: rotate-image 10s linear infinite; }
+      .sub-2 .strategy > dl > dd > p {
+        text-align: left;
+        margin-top: 30px; }
+    .sub-2 .strategy > ul {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      margin-top: 80px; }
+      .sub-2 .strategy > ul > li {
+        display: table-cell;
+        vertical-align: top; }
+        .sub-2 .strategy > ul > li > dl > dt {
+          font-size: 30px;
+          font-weight: 700;
+          color: #E62E8A; }
+        .sub-2 .strategy > ul > li > dl > dd {
+          margin-top: 30px; }
+          .sub-2 .strategy > ul > li > dl > dd > .summarize-img img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto; }
+          .sub-2 .strategy > ul > li > dl > dd p {
+            text-align: left;
+            margin-top: 30px; }
+          .sub-2 .strategy > ul > li > dl > dd > figure {
+            margin-top: 80px; }
+            .sub-2 .strategy > ul > li > dl > dd > figure img {
+              display: block;
+              width: 100%; }
+        .sub-2 .strategy > ul > li:first-child {
+          padding-right: 20px; }
+        .sub-2 .strategy > ul > li:last-child {
+          padding-left: 20px; }
+  .sub-2 .reinforce {
+    margin-top: 80px; }
+    .sub-2 .reinforce dl dt {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      color: #E62E8A; }
+    .sub-2 .reinforce dl dd {
+      margin-top: 30px; }
+  @media (max-width: 1024px) {
+    .sub-2 {
+      font-size: 15px;
+      line-height: 23px; }
+      .sub-2 .top-summary figure {
+        margin-top: 30px; }
+      .sub-2 .strategy {
+        margin-top: 40px; }
+        .sub-2 .strategy > dl > dt {
+          font-size: 20px; }
+        .sub-2 .strategy > dl > dd {
+          margin-top: 20px; }
+          .sub-2 .strategy > dl > dd b {
+            font-size: 18px; }
+          .sub-2 .strategy > dl > dd .process {
+            margin-top: 20px; }
+          .sub-2 .strategy > dl > dd p {
+            margin-top: 20px; }
+        .sub-2 .strategy > ul {
+          display: block;
+          margin-top: 40px; }
+          .sub-2 .strategy > ul > li {
+            display: block;
+            padding: 0 !important; }
+            .sub-2 .strategy > ul > li > dl > dt {
+              font-size: 20px; }
+            .sub-2 .strategy > ul > li > dl > dd {
+              margin-top: 20px; }
+              .sub-2 .strategy > ul > li > dl > dd p {
+                margin-top: 20px; }
+              .sub-2 .strategy > ul > li > dl > dd figure {
+                margin-top: 20px; }
+            .sub-2 .strategy > ul > li ~ li {
+              margin-top: 30px; }
+      .sub-2 .reinforce {
+        margin-top: 30px; }
+        .sub-2 .reinforce > dl > dt {
+          font-size: 20px; }
+        .sub-2 .reinforce > dl > dd {
+          margin-top: 20px; } }
+
+/* sub-3 */
+.sub-3 {
+  overflow: hidden;
+  font-size: 20px;
+  color: #000;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  padding: 0; }
+  .sub-3 article {
+    padding: 100px 0; }
+    .sub-3 article dt {
+      font-size: 30px;
+      line-height: normal;
+      font-weight: bold; }
+    .sub-3 article.first-content {
+      background-image: url(../images/sub/bg_sub3.png);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover; }
+      .sub-3 article.first-content .summary-top {
+        color: #fff;
+        text-align: center; }
+      .sub-3 article.first-content ul {
+        margin-top: 100px; }
+        .sub-3 article.first-content ul > li > dl > dt {
+          color: #F3C729; }
+        .sub-3 article.first-content ul > li > dl > dd {
+          margin-top: 30px; }
+          .sub-3 article.first-content ul > li > dl > dd .box {
+            display: table;
+            width: 100%;
+            table-layout: fixed; }
+            .sub-3 article.first-content ul > li > dl > dd .box > div {
+              display: table-cell;
+              vertical-align: top; }
+              .sub-3 article.first-content ul > li > dl > dd .box > div > p {
+                color: #fff; }
+              .sub-3 article.first-content ul > li > dl > dd .box > div > dl > dt {
+                display: block;
+                width: 70px;
+                font-size: 20px;
+                line-height: 30px;
+                font-weight: 600;
+                text-align: center;
+                color: #000;
+                border-radius: 100px;
+                background-color: #F3C729; }
+              .sub-3 article.first-content ul > li > dl > dd .box > div > dl > dd {
+                font-size: 24px;
+                color: #F3C729;
+                font-weight: 500;
+                line-height: 33px;
+                margin-top: 20px; }
+              .sub-3 article.first-content ul > li > dl > dd .box > div:first-child {
+                padding-right: 25px; }
+              .sub-3 article.first-content ul > li > dl > dd .box > div:last-child {
+                width: 25%;
+                padding-left: 25px; }
+        .sub-3 article.first-content ul > li ~ li {
+          margin-top: 100px; }
+    .sub-3 article.second-content {
+      padding-bottom: 200px;
+      background-color: #F3C927; }
+      .sub-3 article.second-content dl dt {
+        color: #005330; }
+      .sub-3 article.second-content dl dd figure img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto; }
+        .sub-3 article.second-content dl dd figure img.visible-sm {
+          display: none; }
+      .sub-3 article.second-content .writer {
+        text-align: center;
+        margin-top: 100px; }
+        .sub-3 article.second-content .writer figure img {
+          display: block;
+          max-width: 100%;
+          margin: 0 auto; }
+        .sub-3 article.second-content .writer figure figcaption {
+          font-size: 16px;
+          font-weight: 300;
+          margin-top: 10px; }
+          .sub-3 article.second-content .writer figure figcaption b {
+            font-weight: bold; }
+        .sub-3 article.second-content .writer p {
+          width: 100%;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          max-width: 700px;
+          margin: 20px auto 0;
+          padding-top: 20px;
+          border-top: 1px solid #000; }
+  @media (max-width: 1024px) {
+    .sub-3 {
+      font-size: 15px;
+      line-height: 23px; }
+      .sub-3 article {
+        padding: 30px 0 60px; }
+        .sub-3 article dt {
+          font-size: 20px; }
+        .sub-3 article.first-content ul {
+          margin-top: 40px; }
+          .sub-3 article.first-content ul > li > dl > dd {
+            margin-top: 20px; }
+            .sub-3 article.first-content ul > li > dl > dd .box {
+              display: block; }
+              .sub-3 article.first-content ul > li > dl > dd .box > div {
+                display: block;
+                width: 100% !important;
+                padding: 0 !important; }
+                .sub-3 article.first-content ul > li > dl > dd .box > div dl dt {
+                  font-size: 18px; }
+                .sub-3 article.first-content ul > li > dl > dd .box > div dl dd {
+                  font-size: 16px;
+                  line-height: 1.5;
+                  margin-top: 20px; }
+                .sub-3 article.first-content ul > li > dl > dd .box > div ~ div {
+                  margin-top: 20px; }
+          .sub-3 article.first-content ul > li ~ li {
+            margin-top: 40px; }
+        .sub-3 article.second-content {
+          padding-bottom: 100px; }
+          .sub-3 article.second-content dl dd {
+            margin-top: 20px; }
+            .sub-3 article.second-content dl dd figure img {
+              display: none; }
+              .sub-3 article.second-content dl dd figure img.visible-sm {
+                display: block;
+                border-radius: 20px; }
+                .sub-3 article.second-content dl dd figure img.visible-sm ~ img {
+                  margin-top: 20px; }
+          .sub-3 article.second-content .writer {
+            margin-top: 40px; }
+            .sub-3 article.second-content .writer figure figcaption {
+              font-size: 14px; }
+            .sub-3 article.second-content .writer p {
+              padding-top: 15px;
+              margin-top: 15px; }
+              .sub-3 article.second-content .writer p br {
+                display: none; }
+                .sub-3 article.second-content .writer p br.d-block {
+                  display: block; } }
+
+/* sub-4 */
+.sub-4 {
+  font-size: 20px;
+  color: #000;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: -1px; }
+  .sub-4 dt {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px; }
+  .sub-4 .first {
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 60px 0;
+    table-layout: fixed;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000; }
+    .sub-4 .first dt {
+      margin-bottom: 50px; }
+    .sub-4 .first > div {
+      display: table-cell;
+      height: 100%;
+      vertical-align: top; }
+      .sub-4 .first > div figure img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto; }
+      .sub-4 .first > div .graph-up {
+        position: relative;
+        overflow: hidden;
+        height: 386px; }
+        .sub-4 .first > div .graph-up .num {
+          position: absolute;
+          top: 110px;
+          left: 50%;
+          z-index: 1;
+          transform: translateX(-50%); }
+          .sub-4 .first > div .graph-up .num p b {
+            display: inline-block;
+            vertical-align: bottom;
+            font-size: 70px;
+            line-height: 52px;
+            color: #fff;
+            font-weight: bold; }
+          .sub-4 .first > div .graph-up .num p small {
+            display: inline-block;
+            vertical-align: bottom;
+            font-size: 30px;
+            line-height: 24px;
+            color: #fff;
+            font-weight: 700;
+            margin-left: -2px; }
+          .sub-4 .first > div .graph-up .num span {
+            font-size: 30px;
+            color: #fff;
+            font-weight: 500;
+            margin-top: 10px; }
+        .sub-4 .first > div .graph-up .arrow img {
+          display: block;
+          max-width: 100%;
+          margin: 0 auto; }
+        .sub-4 .first > div .graph-up .graph {
+          position: absolute;
+          bottom: 80px;
+          width: 273px;
+          height: 102px;
+          left: 50%;
+          transform: translateX(-50%); }
+          .sub-4 .first > div .graph-up .graph div {
+            position: relative;
+            width: 0;
+            overflow: hidden;
+            -webkit-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+            -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s; }
+            .sub-4 .first > div .graph-up .graph div img {
+              display: block;
+              width: 273px; }
+      .sub-4 .first > div .effect-1.show .graph-up .graph div {
+        width: 273px; }
+      .sub-4 .first > div:first-child {
+        width: 32.4999999%;
+        padding-right: 40px; }
+        .sub-4 .first > div:first-child > ul > li {
+          padding-bottom: 50px; }
+          .sub-4 .first > div:first-child > ul > li ~ li {
+            padding-bottom: 0;
+            padding-top: 50px;
+            border-top: 1px solid #000; }
+      .sub-4 .first > div:last-child {
+        padding-left: 40px;
+        border-left: 1px solid #000; }
+        .sub-4 .first > div:last-child > dl > dd > ul {
+          display: table;
+          width: 100%;
+          height: 432px;
+          table-layout: fixed; }
+          .sub-4 .first > div:last-child > dl > dd > ul > li {
+            display: table-cell;
+            text-align: center;
+            vertical-align: bottom; }
+            .sub-4 .first > div:last-child > dl > dd > ul > li .num p {
+              color: #E62E8A;
+              letter-spacing: -1.5px; }
+              .sub-4 .first > div:last-child > dl > dd > ul > li .num p b {
+                display: inline-block;
+                vertical-align: top;
+                font-weight: bold;
+                font-size: 70px;
+                line-height: 50px; }
+              .sub-4 .first > div:last-child > dl > dd > ul > li .num p small {
+                display: inline-block;
+                vertical-align: top;
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 26px; }
+            .sub-4 .first > div:last-child > dl > dd > ul > li .num span {
+              display: block;
+              font-size: 24px;
+              font-weight: bold;
+              margin-top: 10px; }
+            .sub-4 .first > div:last-child > dl > dd > ul > li .bar {
+              overflow: hidden;
+              margin-top: 30px; }
+              .sub-4 .first > div:last-child > dl > dd > ul > li .bar span {
+                display: block;
+                width: 100px;
+                height: 0;
+                margin: 0 auto;
+                -webkit-transition-property: all;
+                transition-property: all;
+                -webkit-transition-duration: 1s;
+                transition-duration: 1s;
+                -webkit-transition-timing-function: ease-in-out;
+                transition-timing-function: ease-in-out;
+                -webkit-transition-delay: 0s;
+                transition-delay: 0s;
+                transform-origin: bottom;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+                background-color: #a1a2a2; }
+          .sub-4 .first > div:last-child > dl > dd > ul.show > li:nth-of-type(1) .bar span {
+            height: 302px; }
+          .sub-4 .first > div:last-child > dl > dd > ul.show > li:nth-of-type(2) .bar span {
+            height: 240px; }
+          .sub-4 .first > div:last-child > dl > dd > ul.show > li:nth-of-type(3) .bar span {
+            height: 190px; }
+          .sub-4 .first > div:last-child > dl > dd > ul.show > li:nth-of-type(4) .bar span {
+            height: 85px; }
+    @media (max-width: 1024px) {
+      .sub-4 .first {
+        display: block;
+        height: auto;
+        padding: 30px 0; }
+        .sub-4 .first dt {
+          margin-bottom: 20px; }
+        .sub-4 .first > div {
+          display: block;
+          padding: 0 !important;
+          width: 100% !important; }
+          .sub-4 .first > div:first-child > ul > li {
+            padding-bottom: 30px; }
+            .sub-4 .first > div:first-child > ul > li ~ li {
+              padding-top: 30px; }
+          .sub-4 .first > div:last-child {
+            border-top: 1px solid #000;
+            border-left: 0;
+            padding-top: 30px !important;
+            margin-top: 30px; }
+            .sub-4 .first > div:last-child > dl > dd > ul {
+              height: 380px; }
+              .sub-4 .first > div:last-child > dl > dd > ul > li .num p b {
+                font-size: 30px;
+                line-height: normal; }
+              .sub-4 .first > div:last-child > dl > dd > ul > li .num p small {
+                font-size: 14px; }
+              .sub-4 .first > div:last-child > dl > dd > ul > li .num span {
+                font-size: 16px;
+                margin-top: 0; }
+              .sub-4 .first > div:last-child > dl > dd > ul > li .bar {
+                margin-top: 5px; }
+                .sub-4 .first > div:last-child > dl > dd > ul > li .bar span {
+                  width: 60px; } }
+  .sub-4 .second {
+    padding: 60px 0;
+    border-bottom: 1px solid #000; }
+    .sub-4 .second dt {
+      margin-bottom: 50px; }
+    .sub-4 .second dl dd {
+      text-align: center; }
+      .sub-4 .second dl dd > ul {
+        display: flex;
+        justify-content: space-between; }
+        .sub-4 .second dl dd > ul > li .num p b {
+          display: inline-block;
+          vertical-align: bottom;
+          font-size: 70px;
+          color: #E62E8A;
+          line-height: 52px;
+          font-weight: bold; }
+        .sub-4 .second dl dd > ul > li .num p small {
+          display: inline-block;
+          vertical-align: bottom;
+          font-size: 30px;
+          line-height: 24px;
+          color: #000;
+          font-weight: 700;
+          margin-left: -2px; }
+        .sub-4 .second dl dd > ul > li figure {
+          margin-top: 20px; }
+          .sub-4 .second dl dd > ul > li figure img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto; }
+          .sub-4 .second dl dd > ul > li figure figcaption {
+            font-size: 24px;
+            color: #000;
+            font-weight: 700;
+            padding-top: 15px; }
+    @media (max-width: 1024px) {
+      .sub-4 .second {
+        padding: 30px 0; }
+        .sub-4 .second dt {
+          margin-bottom: 20px; }
+        .sub-4 .second dl dd > ul {
+          display: block;
+          font-size: 0; }
+          .sub-4 .second dl dd > ul > li {
+            display: inline-block;
+            vertical-align: top;
+            width: 50%; }
+            .sub-4 .second dl dd > ul > li .box .num p b {
+              font-size: 30px;
+              line-height: normal; }
+            .sub-4 .second dl dd > ul > li .box .num p small {
+              font-size: 14px;
+              line-height: 26px;
+              margin-left: 0; }
+            .sub-4 .second dl dd > ul > li .box figure {
+              margin-top: 0; }
+              .sub-4 .second dl dd > ul > li .box figure img {
+                max-width: 80%; }
+              .sub-4 .second dl dd > ul > li .box figure figcaption {
+                font-size: 20px;
+                padding-top: 10px; }
+            .sub-4 .second dl dd > ul > li:nth-of-type(2n + 1) {
+              padding-right: 15px; }
+            .sub-4 .second dl dd > ul > li:nth-of-type(2n + 2) {
+              padding-left: 15px; }
+            .sub-4 .second dl dd > ul > li:nth-of-type(2) ~ li {
+              margin-top: 30px; } }
+  .sub-4 .third {
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 60px 0;
+    table-layout: fixed;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000; }
+    .sub-4 .third dt {
+      line-height: 1.6;
+      letter-spacing: -2px;
+      margin-bottom: 50px; }
+    .sub-4 .third > div {
+      display: table-cell;
+      height: 100%;
+      vertical-align: top; }
+      .sub-4 .third > div:first-child {
+        width: 32.4999999%;
+        padding-right: 40px; }
+        .sub-4 .third > div:first-child > ul > li {
+          padding-bottom: 50px; }
+          .sub-4 .third > div:first-child > ul > li figure img {
+            display: block;
+            max-width: 100%; }
+          .sub-4 .third > div:first-child > ul > li ~ li {
+            padding-bottom: 0;
+            padding-top: 50px;
+            border-top: 1px solid #000; }
+      .sub-4 .third > div:last-child {
+        padding-left: 40px;
+        border-left: 1px solid #000; }
+        .sub-4 .third > div:last-child ul {
+          background-image: url(../images/sub/img_sub4_12.png);
+          background-repeat: no-repeat;
+          background-size: auto auto;
+          background-position: calc(100% - 55px) calc(100% - 172px); }
+          .sub-4 .third > div:last-child ul li strong {
+            display: block;
+            font-size: 30px;
+            line-height: 36px;
+            font-weight: bold;
+            color: #E62E8A;
+            margin-bottom: 10px; }
+            .sub-4 .third > div:last-child ul li strong small {
+              font-size: 20px; }
+          .sub-4 .third > div:last-child ul li p {
+            line-height: 24px;
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 10px; }
+            .sub-4 .third > div:last-child ul li p:last-child {
+              margin-bottom: 0; }
+          .sub-4 .third > div:last-child ul li b {
+            line-height: 24px;
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 6px; }
+          .sub-4 .third > div:last-child ul li ~ li {
+            margin-top: 40px; }
+        .sub-4 .third > div:last-child figure {
+          display: none; }
+    @media (max-width: 1024px) {
+      .sub-4 .third {
+        display: block;
+        height: auto;
+        padding: 30px 0; }
+        .sub-4 .third dt {
+          margin-bottom: 20px; }
+        .sub-4 .third > div {
+          display: block;
+          padding: 0 !important;
+          width: 100% !important; }
+          .sub-4 .third > div:first-child > ul > li {
+            padding-bottom: 30px; }
+            .sub-4 .third > div:first-child > ul > li figure img {
+              margin: 0 auto; }
+            .sub-4 .third > div:first-child > ul > li ~ li {
+              padding-top: 30px; }
+          .sub-4 .third > div:last-child {
+            border-top: 1px solid #000;
+            border-left: 0;
+            padding-top: 30px !important;
+            margin-top: 30px; }
+            .sub-4 .third > div:last-child ul {
+              background: none; }
+              .sub-4 .third > div:last-child ul li strong {
+                font-size: 18px;
+                line-height: 22px; }
+              .sub-4 .third > div:last-child ul li p {
+                font-size: 15px;
+                line-height: 18px; }
+              .sub-4 .third > div:last-child ul li b {
+                font-size: 16px;
+                line-height: 18px; }
+              .sub-4 .third > div:last-child ul li ~ li {
+                margin-top: 20px; }
+            .sub-4 .third > div:last-child figure {
+              display: block;
+              margin-top: 30px; }
+              .sub-4 .third > div:last-child figure img {
+                display: block;
+                max-width: 100%;
+                margin: 0 auto; } }
+  .sub-4 .fourth {
+    padding: 60px 0;
+    border-bottom: 1px solid #000; }
+    .sub-4 .fourth dt {
+      margin-bottom: 50px; }
+    .sub-4 .fourth dd .visible-lg img {
+      display: block;
+      width: 100%; }
+    .sub-4 .fourth dd .visible-sm {
+      display: none; }
+    @media (max-width: 1024px) {
+      .sub-4 .fourth dt {
+        margin-bottom: 20px; }
+      .sub-4 .fourth dd .visible-lg {
+        display: none; }
+      .sub-4 .fourth dd .visible-sm {
+        display: block; }
+        .sub-4 .fourth dd .visible-sm img {
+          display: block;
+          max-width: 100%;
+          margin: 0 auto; }
+          .sub-4 .fourth dd .visible-sm img ~ img {
+            margin-top: 30px; }
+          .sub-4 .fourth dd .visible-sm img:nth-of-type(2) ~ img {
+            margin-top: 20px; } }
+  @media (max-width: 1024px) {
+    .sub-4 dt {
+      font-size: 20px;
+      line-height: normal; } }
 
 /*# sourceMappingURL=sub.css.map */

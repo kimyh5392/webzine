@@ -1,0 +1,232 @@
+@import 'common';
+
+/* header */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px 0px rgba(#000, .1);
+    .container {
+        position: relative;
+        .vol {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            img {
+                display: block;
+                max-width: 100%;
+            }
+        }
+        .logo {
+            display: block;
+            width: 156px;
+            font-size: 0;
+            margin: 0 auto;
+            a {
+                display: block;
+                img {
+                    display: block;
+                    max-width: 100%;
+                }
+            }
+        }
+        .btn-area {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            .btn-nav {
+                display: block;
+                cursor: pointer;
+                img {
+                    display: block;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    @media(max-width: $md) {
+        padding: 17.705px 0;
+        .container {
+            .vol {
+                display: none;
+            }
+            .logo {
+                width: 108px;
+            }
+            .btn-area {
+                right: 20px;
+            }
+        }
+    }
+}
+
+/* nav */
+#nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 12;
+    width: 100%;
+    height: 100vh;
+    max-width: 400px;
+    @include transition($duration: .3s, $timing: esae-out);
+    background-color: #fff;
+    .nav-head {
+        position: relative;
+        height: 90px;
+        .logo {
+            display: none;
+            img {
+                display: block;
+                max-width: 100%;
+            }
+        }
+        .btn-area {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            .btn-nav-close {
+                display: block;
+                cursor: pointer;
+                img {
+                    display: block;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .nav-body {
+        position: relative;
+        overflow-y: auto;
+        height: calc(100vh - 90px);
+        padding: 0 20px 60px;
+        > ul {
+            > li {
+                border-bottom: 1px solid #DDE2E8;
+                &:last-child {
+                    border-bottom: 0;
+                }
+                > a {
+                    position: relative;
+                    display: block;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #3B5B80;
+                    line-height: 50px;
+                    @include gmarket();
+                }
+                > ul {
+                    display: none;
+                    padding-left: 10px;
+                    > li {
+                        > a {
+                            display: block;
+                            font-size: 14px;
+                            color: #3B5B80;
+                            font-weight: 500;
+                            line-height: 30px;
+                        }
+                        &:last-child {
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+                &.has-child {
+                    > a {
+                        &:after {
+                            position: absolute;
+                            top: 50%;
+                            right: 15px;
+                            font-size: 14px;
+                            @include pre();
+                            content: '▼';
+                            transform: translateY(-50%);
+                            @include transition();
+                        }
+                    }
+                    &.active {
+                        > a {
+                            &:after {
+                                transform: translateY(-50%) rotate(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        color: #B1B1B1;
+        text-align: center;
+    }
+    @media(max-width: $md) {
+        .nav-head {
+            height: 70px;
+            padding-top: 22px;
+            .logo {
+                display: block;
+                width: 90px;
+                margin: 0 auto;
+            }
+        }
+        .nav-body {
+            height: calc(100vh - 70px);
+        }
+    }
+}
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    display: none;
+    background-color: rgba(#000, .6);
+}
+
+body {
+    &.opened {
+        #nav {
+            right: 0;
+        }
+        .backdrop {
+            display: block;
+        }
+    }
+}
+
+/* footer */
+#footer {
+    padding: 70px 0;
+    background-color: #424242;
+    .container {
+        img {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    @media(max-width: $md) {
+        padding: 0;
+        .container {
+            img {
+                width: auto;
+                height: 390px;
+            }
+        }
+    }
+}

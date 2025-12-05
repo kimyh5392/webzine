@@ -283,4 +283,24 @@ a, button {
     .space2 {
       height: 60px; } }
 
+/* btn-quick */
+.btn-quick {
+  position: fixed;
+  z-index: 9;
+  right: 60px;
+  bottom: 60px; }
+  .btn-quick > a {
+    display: block; }
+    .btn-quick > a img {
+      display: block;
+      max-width: 100%; }
+    .btn-quick > a ~ a {
+      margin-top: 10px; }
+  @media (max-width: 1600px) {
+    .btn-quick {
+      right: 15px; } }
+  @media (max-width: 1024px) {
+    .btn-quick {
+      display: none; } }
+
 /*# sourceMappingURL=sub.css.map */

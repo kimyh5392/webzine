@@ -103,6 +103,16 @@
         </section>
     </main>
     
+    <!-- btn-quick -->
+    <div class="btn-quick">
+        <a href="javascript:;" class="btn-share">
+            <img src="./assets/images/sub/img_share.png" alt="">
+        </a>
+        <a href="javascript:;" class="btn-print">
+            <img src="./assets/images/sub/img_print.png" alt="">
+        </a>
+    </div>
+    
     <?php include_once("./inc/footer.php"); ?>
     <?php include_once("./inc/docfoot.php"); ?>
     <script src="./assets/js/common.js"></script>
@@ -126,6 +136,16 @@
                 });
             }
         }
+        
+        // btn-share 관련
+        $('.btn-share').on('click', function() {
+            alert('클립보드에 복사되었습니다.');
+            const url = window.location.href;
+            navigator.clipboard.writeText(url);
+        });
+        $('.btn-print').on('click', function(){
+            window.print();
+        });
     </script>
 </body>
 </html>

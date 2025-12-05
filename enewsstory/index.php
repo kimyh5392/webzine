@@ -26,7 +26,7 @@
                     <div class="jumbo-slider-am swiper">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
-                                <a href="#">
+                                <a href="./sub01.php">
                                     <img src="./assets/images/main/img_jumbotron_am01.png" class="visible-lg" alt="">
                                     <img src="./assets/images/main/img_jumbotron_am_sm01.png" class="visible-sm" alt="">
                                 </a>
@@ -188,7 +188,7 @@
             <!-- banner -->
             <div class="banner">
                 <div class="container">
-                    <a href="#">
+                    <a href="./sub02.php">
                         <img src="./assets/images/main/img_pm_banner_lg.png" class="visible-lg" alt="">
                         <img src="./assets/images/main/img_pm_banner_sm.png" class="visible-sm" alt="">
                     </a>

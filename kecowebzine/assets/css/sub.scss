@@ -1,0 +1,34 @@
+@import 'common';
+
+.visible-lg {
+    display: block;
+}
+.visible-sm {
+    display: none;
+}
+@media(max-width: $md) {
+    .visible-lg {
+        display: none;
+    }
+    .visible-sm {
+        display: block;
+    }
+}
+
+.sub {
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 50% 0;
+    .container {
+        max-width: 1230px;
+        img {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    @media(max-width: $md) {
+        .container {
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./assets/css/default.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>한국가스공사 KOGAS 웹진</title>
+    <style>
+        .sec04 {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: #f1efe7;
+}
+
+.sec04-title {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+}
+
+.sec04-title span {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sec04-title h2 {
+    margin: 10px 0 0;
+    font-size: 72px;
+    line-height: 1;
+}
+
+.circle-stage {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 1800px;
+    height: 1800px;
+    transform: translateX(-50%);
+}
+
+.card-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+    will-change: transform;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    opacity: .3;
+    transition: opacity 0.4s ease, filter 0.4s ease;
+}
+        
+.circle.active {
+    opacity: 1;
+}
+
+.circle a {
+    display: block;
+    color: #111;
+    text-decoration: none;
+}
+
+.circle figure {
+    overflow: hidden;
+    height: 420px;
+    margin: 0;
+    /*border-radius: 180px 180px 24px 24px;*/
+    background: #ddd;
+}
+
+.circle img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle .text {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.circle .text span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.circle .text strong {
+    display: block;
+    font-size: 25px;
+    line-height: 1.4;
+}
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="container">
+            header
+        </div>
+    </header>
+    <!-- content -->
+    <main id="content">
+        <!--<section style="height: 100vh; background-color: dimgrey;"></section>-->
+        <section class="sec04">
+            <div class="sec04-title">
+                <h2>VOL. 700</h2>
+            </div>
+
+            <div class="circle-stage">
+                <div class="card-wrap">
+                    <article class="circle">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/card01.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <span>여행</span>
+                                <strong>함께 떠나는 특별한 여행</strong>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="circle">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/card02.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <span>문화</span>
+                                <strong>길 위에서 만나는 이야기</strong>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="circle">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/card03.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <span>안전</span>
+                                <strong>생활 속 교통안전</strong>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="circle">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/card04.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <span>라이프</span>
+                                <strong>일상에 즐거움을 더하다</strong>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="circle">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/card05.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <span>인터뷰</span>
+                                <strong>사람을 만나는 시간</strong>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="circle">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/card03.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <span>안전</span>
+                                <strong>생활 속 교통안전</strong>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="circle">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/card04.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <span>라이프</span>
+                                <strong>일상에 즐거움을 더하다</strong>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="circle">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/card05.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <span>인터뷰</span>
+                                <strong>사람을 만나는 시간</strong>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section style="height: 100vh; background-color: cadetblue;"></section>
+    </main>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container">
+            <h2 class="logo">
+                <img src="" alt="">
+            </h2>
+            <div class="sns-list">
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="company-info">
+                <ul>
+                    <li><address></address></li>
+                    <li></li>
+                </ul>
+                <p class="copyright">COPYRIGHT ⓒ2023 KOREA GAS CORPORATION ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        $(function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const $cardWrap = $('.sec04 .card-wrap');
+            const $slides = $('.sec04 .circle');
+
+            if (!$cardWrap.length || !$slides.length) {
+                return;
+            }
+
+            const sectionDeg = 25; // 카드 사이 각도
+            const radius = 1200;   // 원의 반지름
+            const sections = $slides.length;
+            const totalRotation = (sections - 1) * sectionDeg;
+
+            /*
+             * 카드들을 원 둘레에 배치
+             *
+             * 반드시 transform을 한 번에 적용해야
+             * 회전 후 원 바깥쪽으로 이동합니다.
+             */
+            $slides.each(function (index) {
+                const angle = index * sectionDeg;
+
+                this.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translateY(-${radius}px)`;
+            });
+
+            function updateActiveSlide(progress) {
+                const adjustedProgress = gsap.utils.clamp(
+                    0, 1, (progress - 0.1) / 0.9
+                );
+
+                const activeIndex = Math.round(
+                    adjustedProgress * (sections - 1)
+                );
+
+                $slides.removeClass('active');
+                $slides.eq(activeIndex).addClass('active');
+            }
+
+            ScrollTrigger.create({
+                trigger: '.sec04',
+                start: 'top top',
+                end: '+=300%',
+                pin: true,
+                scrub: true,
+                anticipatePin: 1,
+
+                onUpdate(self) {
+                    const progress = self.progress;
+
+                    const adjustedProgress =
+                        progress <= 0.1
+                            ? 0
+                            : gsap.utils.clamp(
+                                0,
+                                1,
+                                (progress - 0.1) / 0.9
+                            );
+
+                    gsap.set($cardWrap, {
+                        rotation: -totalRotation * adjustedProgress,
+                        transformOrigin: '50% 50%'
+                    });
+
+                    updateActiveSlide(progress);
+                }
+            });
+
+            $slides.eq(0).addClass('active');
+        });
+    </script>
+</body>
+</html>

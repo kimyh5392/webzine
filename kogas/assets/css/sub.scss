@@ -1,0 +1,232 @@
+@import 'common';
+
+@keyframes rotate-image {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* sub-2 */
+.sub-2 {
+    padding-bottom: 160px;
+    background-color: #00163B;
+    background-repeat: no-repeat;
+    background-image: url(../images/sub/bg_page_top.png);
+    background-size: auto auto;
+    background-position: 0 60px;
+    .container {
+        .section-header {
+            text-align: center;
+            padding-top: 50px;
+            h3 {
+                display: inline-block;
+                vertical-align: top;
+                font-size: 20px;
+                color: #fff;
+                line-height: 32px;
+                font-weight: 700;
+                letter-spacing: -0.4px;
+                padding: 0 16px;
+                border-radius: 100px;
+                background-color: #0C3A87;
+            }
+        }
+        .section-content {
+            padding-top: 90px;
+            .earth-wrap {
+                position: relative;
+                width: 635px;
+                height: 635px;
+                margin: 0 auto;
+                .triangle {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    @include transition($duration: .4s);
+                    transform: translate(-50%, -50%);
+                    > div {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        > img {
+                            position: absolute;
+                            max-width: 100%;
+                            &.angle-1 {
+                                top: -26px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                            &.angle-2 {
+                                left: 42px;
+                                bottom: 80px;
+                            }
+                            &.angle-3 {
+                                right: 42px;
+                                bottom: 80px;
+                            }
+                        }
+                    }
+                }
+                .earth-out {
+                    position: relative;
+                    z-index: 2;
+                }
+                .earth {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 460px;
+                    overflow: hidden;
+                    transform: translate(-50%, -50%);
+                    border-radius: 100%;
+                    > div {
+                        position: relative;
+                        top: 40px;
+                        display: block;
+                        width: 100%;
+                        opacity: 0;
+                        max-width: 460px;
+                        @include transition($delay: .5s, $duration: 1s);
+                        &:before {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 430px;
+                            height: 430px;
+                            content: '';
+                            z-index: 1;
+                            border-radius: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: rgba(#000, .4);
+                        }
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+                .details {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    .inner {
+                        display: table;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        table-layout: fixed;
+                        .v-align {
+                            display: table-cell;
+                            vertical-align: middle;
+                            h3 {
+                                position: relative;
+                                left: 40px;
+                                display: block;
+                                opacity: 0;
+                                color: #fff;
+                                font-size: 39px;
+                                font-weight: 900;
+                                line-height: 45px;
+                                @include transition($delay: 1.8s, $duration: .6s);
+                            }
+                            p {
+                                position: relative;
+                                left: 40px;
+                                opacity: 0;
+                                color: #fff;
+                                font-size: 17px;
+                                font-weight: 700;
+                                line-height: 24px;
+                                letter-spacing: -.2px;
+                                margin-top: 20px;
+                                @include transition($delay: 2s, $duration: .6s);
+                            }
+                        }
+                    }
+                }
+                .rotate-img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 620px;
+                    margin-left: -310px;
+                    margin-top: -310px;
+                    z-index: 2;
+                    animation: rotate-image 60s linear infinite;
+                    img {
+                        display: block;
+                        width: 100%;
+                        
+                    }
+                }
+                &.show {
+                    .earth {
+                        div {
+                            top: 0;
+                            opacity: 1;
+                        }
+                    }
+                    .triangle {
+                        opacity: 1;
+                    }
+                    .details {
+                        .inner {
+                            .v-align {
+                                h3 {
+                                    left: 0;
+                                    opacity: 1;
+                                }
+                                p {
+                                    left: 0;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .top-summary {
+                font-size: 20px;
+                color: #fff;
+                font-weight: 500;
+                line-height: 35px;
+                text-align: center;
+                margin-top: 65px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

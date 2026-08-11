@@ -87,10 +87,17 @@ a, button {
   background-image: url(../images/sub/bg_page_top.png);
   background-size: auto auto;
   background-position: 0 60px; }
-  .sub-2 .container .section-header {
+  @media (max-width: 1024px) {
+    .sub-2 {
+      padding-bottom: 100px;
+      background: #00163B; } }
+
+.pgae-intro {
+  padding-bottom: 120px; }
+  .pgae-intro .container .page-top {
     text-align: center;
     padding-top: 50px; }
-    .sub-2 .container .section-header h3 {
+    .pgae-intro .container .page-top h3 {
       display: inline-block;
       vertical-align: top;
       font-size: 20px;
@@ -101,14 +108,14 @@ a, button {
       padding: 0 16px;
       border-radius: 100px;
       background-color: #0C3A87; }
-  .sub-2 .container .section-content {
+  .pgae-intro .container .page-content {
     padding-top: 90px; }
-    .sub-2 .container .section-content .earth-wrap {
+    .pgae-intro .container .page-content .earth-wrap {
       position: relative;
       width: 635px;
       height: 635px;
       margin: 0 auto; }
-      .sub-2 .container .section-content .earth-wrap .triangle {
+      .pgae-intro .container .page-content .earth-wrap .triangle {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -125,28 +132,29 @@ a, button {
         -webkit-transition-delay: 0s;
         transition-delay: 0s;
         transform: translate(-50%, -50%); }
-        .sub-2 .container .section-content .earth-wrap .triangle > div {
+        .pgae-intro .container .page-content .earth-wrap .triangle > div {
           position: relative;
           width: 100%;
           height: 100%;
           display: block; }
-          .sub-2 .container .section-content .earth-wrap .triangle > div > img {
+          .pgae-intro .container .page-content .earth-wrap .triangle > div > img {
             position: absolute;
             max-width: 100%; }
-            .sub-2 .container .section-content .earth-wrap .triangle > div > img.angle-1 {
+            .pgae-intro .container .page-content .earth-wrap .triangle > div > img.angle-1 {
               top: -26px;
               left: 50%;
               transform: translateX(-50%); }
-            .sub-2 .container .section-content .earth-wrap .triangle > div > img.angle-2 {
+            .pgae-intro .container .page-content .earth-wrap .triangle > div > img.angle-2 {
               left: 42px;
               bottom: 80px; }
-            .sub-2 .container .section-content .earth-wrap .triangle > div > img.angle-3 {
+            .pgae-intro .container .page-content .earth-wrap .triangle > div > img.angle-3 {
               right: 42px;
               bottom: 80px; }
-      .sub-2 .container .section-content .earth-wrap .earth-out {
+      .pgae-intro .container .page-content .earth-wrap .earth-out {
         position: relative;
-        z-index: 2; }
-      .sub-2 .container .section-content .earth-wrap .earth {
+        z-index: 2;
+        width: 100%; }
+      .pgae-intro .container .page-content .earth-wrap .earth {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -154,7 +162,7 @@ a, button {
         overflow: hidden;
         transform: translate(-50%, -50%);
         border-radius: 100%; }
-        .sub-2 .container .section-content .earth-wrap .earth > div {
+        .pgae-intro .container .page-content .earth-wrap .earth > div {
           position: relative;
           top: 40px;
           display: block;
@@ -169,7 +177,7 @@ a, button {
           transition-timing-function: linear;
           -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s; }
-          .sub-2 .container .section-content .earth-wrap .earth > div:before {
+          .pgae-intro .container .page-content .earth-wrap .earth > div:before {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -180,25 +188,25 @@ a, button {
             border-radius: 50%;
             transform: translate(-50%, -50%);
             background-color: rgba(0, 0, 0, 0.4); }
-          .sub-2 .container .section-content .earth-wrap .earth > div img {
+          .pgae-intro .container .page-content .earth-wrap .earth > div img {
             display: block;
             width: 100%; }
-      .sub-2 .container .section-content .earth-wrap .details {
+      .pgae-intro .container .page-content .earth-wrap .details {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%; }
-        .sub-2 .container .section-content .earth-wrap .details .inner {
+        .pgae-intro .container .page-content .earth-wrap .details .inner {
           display: table;
           width: 100%;
           height: 100%;
           text-align: center;
           table-layout: fixed; }
-          .sub-2 .container .section-content .earth-wrap .details .inner .v-align {
+          .pgae-intro .container .page-content .earth-wrap .details .inner .v-align {
             display: table-cell;
             vertical-align: middle; }
-            .sub-2 .container .section-content .earth-wrap .details .inner .v-align h3 {
+            .pgae-intro .container .page-content .earth-wrap .details .inner .v-align h3 {
               position: relative;
               left: 40px;
               display: block;
@@ -215,7 +223,7 @@ a, button {
               transition-timing-function: linear;
               -webkit-transition-delay: 1.8s;
               transition-delay: 1.8s; }
-            .sub-2 .container .section-content .earth-wrap .details .inner .v-align p {
+            .pgae-intro .container .page-content .earth-wrap .details .inner .v-align p {
               position: relative;
               left: 40px;
               opacity: 0;
@@ -233,7 +241,7 @@ a, button {
               transition-timing-function: linear;
               -webkit-transition-delay: 2s;
               transition-delay: 2s; }
-      .sub-2 .container .section-content .earth-wrap .rotate-img {
+      .pgae-intro .container .page-content .earth-wrap .rotate-img {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -241,27 +249,100 @@ a, button {
         margin-left: -310px;
         margin-top: -310px;
         z-index: 2;
-        animation: rotate-image 60s linear infinite; }
-        .sub-2 .container .section-content .earth-wrap .rotate-img img {
+        animation: rotate-image 40s linear infinite; }
+        .pgae-intro .container .page-content .earth-wrap .rotate-img img {
           display: block;
           width: 100%; }
-      .sub-2 .container .section-content .earth-wrap.show .earth div {
+      .pgae-intro .container .page-content .earth-wrap.show .earth div {
         top: 0;
         opacity: 1; }
-      .sub-2 .container .section-content .earth-wrap.show .triangle {
+      .pgae-intro .container .page-content .earth-wrap.show .triangle {
         opacity: 1; }
-      .sub-2 .container .section-content .earth-wrap.show .details .inner .v-align h3 {
+      .pgae-intro .container .page-content .earth-wrap.show .details .inner .v-align h3 {
         left: 0;
         opacity: 1; }
-      .sub-2 .container .section-content .earth-wrap.show .details .inner .v-align p {
+      .pgae-intro .container .page-content .earth-wrap.show .details .inner .v-align p {
         left: 0;
         opacity: 1; }
-    .sub-2 .container .section-content .top-summary {
+    .pgae-intro .container .page-content .top-summary {
       font-size: 20px;
       color: #fff;
       font-weight: 500;
       line-height: 35px;
       text-align: center;
       margin-top: 65px; }
+  @media (max-width: 1024px) {
+    .pgae-intro {
+      padding-bottom: 60px; }
+      .pgae-intro .container .page-top {
+        padding-top: 30px; }
+        .pgae-intro .container .page-top h3 {
+          font-size: 14px;
+          padding: 0 10px;
+          line-height: 26px; }
+      .pgae-intro .container .page-content {
+        padding-top: 45px; }
+        .pgae-intro .container .page-content .top-summary {
+          font-size: 14px;
+          line-height: 22px;
+          margin-top: 40px; } }
+  @media (max-width: 768px) {
+    .pgae-intro .container .page-content .earth-wrap {
+      width: 330px;
+      height: 330px; }
+      .pgae-intro .container .page-content .earth-wrap .triangle > div img {
+        width: 58px; }
+        .pgae-intro .container .page-content .earth-wrap .triangle > div img:nth-of-type(1) {
+          top: -13px; }
+        .pgae-intro .container .page-content .earth-wrap .triangle > div img:nth-of-type(2) {
+          left: 20px;
+          bottom: 46px; }
+        .pgae-intro .container .page-content .earth-wrap .triangle > div img:nth-of-type(3) {
+          right: 20px;
+          bottom: 46px; }
+      .pgae-intro .container .page-content .earth-wrap .earth {
+        width: 260px; }
+      .pgae-intro .container .page-content .earth-wrap .details .inner .v-align h3 {
+        font-size: 20px;
+        line-height: 1.4; }
+      .pgae-intro .container .page-content .earth-wrap .details .inner .v-align p {
+        font-size: 12px;
+        margin-top: 10px; }
+      .pgae-intro .container .page-content .earth-wrap .rotate-img {
+        width: 320px;
+        margin-left: -160px;
+        margin-top: -160px; } }
+
+.sub-2 article .article-header h3 {
+  font-size: 26px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.26px; }
+.sub-2 article .article-header p {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 38px;
+  margin-top: 30px; }
+.sub-2 article ~ article {
+  margin-top: 100px; }
+
+/* highlight */
+.highlight {
+  /*background-image: linear-gradient(#4B6097, #4B6097);*/
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position: 0% 0%;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s; }
+  .highlight.active {
+    background-size: 100% 100%; }
 
 /*# sourceMappingURL=sub.css.map */

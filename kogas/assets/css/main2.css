@@ -394,16 +394,9 @@ body.nav-opened {
         line-height: 26px;
         letter-spacing: -.5px; } }
 
-body {
-  /*&.scrolled {
-      #header {
-          @include transition();
-          box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
-      }
-  }*/ }
-  @media (max-width: 1024px) {
-    body {
-      padding-top: 60px; } }
+@media (max-width: 1024px) {
+  body {
+    padding-top: 60px; } }
 
 #header {
   border-bottom: 1px solid #eee; }
@@ -459,13 +452,14 @@ body {
   opacity: 1; }
 @media (max-width: 768px) {
   .jumbotron .section-header {
-    padding: 60px 0 30px; }
+    padding: 30px 0; }
     .jumbotron .section-header p {
       font-size: 18px;
       line-height: 26px; }
     .jumbotron .section-header b {
       font-size: 26px;
-      line-height: 36px; } }
+      line-height: 36px;
+      margin-top: 10px; } }
 
 .jumbo-lg {
   position: relative;
@@ -572,7 +566,44 @@ body {
   display: none; }
   @media (max-width: 768px) {
     .jumbo-sm {
-      display: block; } }
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      padding-bottom: 60px; }
+      .jumbo-sm .container {
+        display: table-cell;
+        vertical-align: top; }
+        .jumbo-sm .container .jumbo-slider .swiper-wrapper .swiper-slide > a {
+          position: relative;
+          overflow: hidden;
+          display: block;
+          border-radius: 20px; }
+          .jumbo-sm .container .jumbo-slider .swiper-wrapper .swiper-slide > a > figure {
+            display: block; }
+            .jumbo-sm .container .jumbo-slider .swiper-wrapper .swiper-slide > a > figure img {
+              display: block;
+              width: 100%; }
+          .jumbo-sm .container .jumbo-slider .swiper-wrapper .swiper-slide > a .details {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 60px 15px 20px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8) 100%); }
+            .jumbo-sm .container .jumbo-slider .swiper-wrapper .swiper-slide > a .details b {
+              display: block;
+              font-size: 26px;
+              font-weight: bold;
+              color: #fff;
+              font-family: "IBM Plex Mono", monospace; }
+            .jumbo-sm .container .jumbo-slider .swiper-wrapper .swiper-slide > a .details p {
+              display: block;
+              font-size: 18px;
+              line-height: 1.4;
+              color: #fff;
+              font-weight: 400;
+              font-family: "IBM Plex Sans KR", sans-serif;
+              margin-top: 10px; } }
 
 @keyframes swipe {
   0% {
@@ -636,6 +667,32 @@ body {
         letter-spacing: -0.4px;
         line-height: 56px;
         animation: swipe 360s linear infinite; }
+  @media (max-width: 1024px) {
+    .message-list .container > dl > dt {
+      width: 205px;
+      font-size: 18px;
+      line-height: 40px; }
+    .message-list .container > dl > dd span {
+      font-size: 18px;
+      line-height: 40px; } }
+  @media (max-width: 1024px) {
+    .message-list .container > dl > dt {
+      width: 50px;
+      font-size: 0;
+      padding: 0;
+      text-align: center;
+      vertical-align: middle; }
+      .message-list .container > dl > dt img {
+        display: inline-block;
+        vertical-align: middle;
+        position: static;
+        transform: none;
+        max-width: 100%;
+        margin-top: -2px; }
+      .message-list .container > dl > dt:after {
+        display: none; }
+    .message-list .container > dl > dd span {
+      font-size: 16px; } }
 
 /* accordion-list */
 .accordion-list {
@@ -727,11 +784,13 @@ body {
       .accordion-list .container .accordion > li .list-content {
         display: none;
         padding-left: 320px; }
-        .accordion-list .container .accordion > li .list-content > figure {
-          padding: 20px 0; }
-          .accordion-list .container .accordion > li .list-content > figure img {
-            display: block;
-            max-width: 100%; }
+        .accordion-list .container .accordion > li .list-content > a {
+          display: block; }
+          .accordion-list .container .accordion > li .list-content > a > figure {
+            padding: 20px 0; }
+            .accordion-list .container .accordion > li .list-content > a > figure img {
+              display: block;
+              max-width: 100%; }
         .accordion-list .container .accordion > li .list-content .inner {
           display: table;
           width: 100%;
@@ -756,6 +815,62 @@ body {
                 width: auto; }
                 .accordion-list .container .accordion > li .list-content .inner > div.type-2 > img ~ img {
                   margin-left: 30px; }
+  @media (max-width: 1024px) {
+    .accordion-list {
+      padding: 60px 0 80px; }
+      .accordion-list .container .accordion > li > .btn-accordion .title-area > div {
+        height: 60px; }
+        .accordion-list .container .accordion > li > .btn-accordion .title-area > div h3 {
+          font-size: 22px; }
+        .accordion-list .container .accordion > li > .btn-accordion .title-area > div b {
+          font-size: 16px; }
+        .accordion-list .container .accordion > li > .btn-accordion .title-area > div p {
+          font-size: 16px; }
+        .accordion-list .container .accordion > li > .btn-accordion .title-area > div:first-child {
+          width: 240px; }
+      .accordion-list .container .accordion > li > .btn-accordion:after {
+        width: 15px;
+        height: 20px;
+        background-size: 15px auto; }
+      .accordion-list .container .accordion > li .list-content {
+        padding-left: 240px; } }
+  @media (max-width: 1024px) {
+    .accordion-list {
+      padding: 60px 0 80px; }
+      .accordion-list .container .accordion > li > .btn-accordion {
+        padding: 10px 35px 10px 10px; }
+        .accordion-list .container .accordion > li > .btn-accordion .title-area {
+          display: block; }
+          .accordion-list .container .accordion > li > .btn-accordion .title-area > div {
+            display: block;
+            width: 100% !important;
+            height: auto; }
+            .accordion-list .container .accordion > li > .btn-accordion .title-area > div h3 {
+              font-size: 18px;
+              margin-bottom: 10px; }
+            .accordion-list .container .accordion > li > .btn-accordion .title-area > div b {
+              font-size: 14px; }
+            .accordion-list .container .accordion > li > .btn-accordion .title-area > div p {
+              font-size: 14px;
+              margin-top: 0; }
+        .accordion-list .container .accordion > li > .btn-accordion:after {
+          right: 10px; }
+      .accordion-list .container .accordion > li .list-content {
+        padding-left: 0; }
+        .accordion-list .container .accordion > li .list-content > a {
+          padding: 10px 0; }
+          .accordion-list .container .accordion > li .list-content > a > figure {
+            padding: 0; }
+          .accordion-list .container .accordion > li .list-content > a .inner {
+            padding: 0; }
+            .accordion-list .container .accordion > li .list-content > a .inner > div:fist-child {
+              padding-right: 5px; }
+            .accordion-list .container .accordion > li .list-content > a .inner > div:last-child {
+              padding-left: 5px; }
+            .accordion-list .container .accordion > li .list-content > a .inner > div.type-2 img {
+              width: 100%; }
+              .accordion-list .container .accordion > li .list-content > a .inner > div.type-2 img ~ img {
+                display: none; } }
 
 @keyframes shake {
   0%, 100% {
@@ -821,5 +936,33 @@ body {
           color: #051BD0; }
       .event-list .container > ul > li:first-child {
         border-left: 1px solid #000; }
+  @media (max-width: 1350px) {
+    .event-list .container > ul > li > a > dl > dt {
+      font-size: 30px; }
+    .event-list .container > ul > li > a > dl > dd {
+      font-size: 20px;
+      line-height: 1.5; }
+    .event-list .container > ul > li > a img {
+      width: 100px; } }
+  @media (max-width: 1024px) {
+    .event-list {
+      padding-bottom: 60px; }
+      .event-list .container > ul {
+        display: block;
+        border-bottom: 1px solid #000; }
+        .event-list .container > ul > li {
+          display: block;
+          width: 100%;
+          border: 0;
+          padding: 20px 0;
+          border-top: 1px solid #000; }
+          .event-list .container > ul > li:first-child {
+            border-left: 0; }
+          .event-list .container > ul > li > a > dl > dt {
+            font-size: 32px; }
+          .event-list .container > ul > li > a > dl > dd {
+            font-size: 22px; }
+          .event-list .container > ul > li > a img {
+            width: 100px; } }
 
 /*# sourceMappingURL=main2.css.map */

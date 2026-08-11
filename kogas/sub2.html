@@ -130,13 +130,13 @@
     </nav>
     <div class="nav-backdrop"></div>
     <!-- content -->
-    <main id="content">
-        <section class="sub-2">
+    <main id="content" class="sub-2">
+        <div class="pgae-intro">
             <div class="container">
-                <div class="section-header">
+                <div class="page-top">
                     <h3>KOGAS Motion</h3>
                 </div>
-                <div class="section-content">
+                <div class="page-content">
                     <div class="earth-wrap">
                         <img src="./assets/images/sub/img_earth_out.png" alt="" class="earth-out">
                         <div class="triangle">
@@ -164,15 +164,54 @@
                         </div>
                     </div>
                     <p class="top-summary">
-                        도시는 아직 잠들어 있지만, AI는 이미 하루를 시작했습니다.<br>
-                        오늘 기온은 몇 도인지, 어느 지역에서 가스 사용량이 급증할지,<br>
-                        LNG 운반선은 언제 도착하는지, 국제 에너지 시장은 어떻게 움직이는지.<br>
-                        수많은 데이터를 실시간으로 분석하며 대한민국의 에너지를 준비하고 있습니다.<br>
-                        한국가스공사가 그리는 AI NATIVE ENERGY COMPANY입니다.
+                        도시는 아직 잠들어 있지만,<br class="visible-sm"> AI는 이미 하루를 시작했습니다.<br>
+                        오늘 기온은 몇 도인지,<br class="visible-sm"> 어느 지역에서 가스 사용량이 급증할지,<br>
+                        LNG 운반선은 언제 도착하는지,<br class="visible-sm"> 국제 에너지 시장은 어떻게 움직이는지.<br>
+                        수많은 데이터를 실시간으로 분석하며<br class="visible-sm"> 대한민국의 에너지를 준비하고 있습니다.<br>
+                        한국가스공사가 그리는<br class="visible-sm"> <b>AI NATIVE ENERGY COMPANY</b>입니다.
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
+        <article>
+            <div class="container">
+                <div class="article-header">
+                    <h3>AI는 어떻게 에너지를<br> 운영할까요?</h3>
+                    <p>
+                        AI는 단순히 질문에 답하는 기술이 아닙니다.<br>
+                        <span class="highlight" style="background-image: linear-gradient(#4B6097, #4B6097); color: #00163B;">에너지 산업에서는 수백, 수천 개의 데이터를 동시에 분석해 최적의 운영 전략을 제안하는 ‘두뇌’ 역할을 합니다.</span>
+                    </p>
+                </div>
+                <div class="article-content">
+                    
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="container">
+                <div class="article-header">
+                    <h3>한국가스공사의<br> AI 혁신 로드맵</h3>
+                    <p>
+                        AI는 하루아침에 완성되지 않습니다.<br>
+                        <span class="highlight" style="background-image: linear-gradient(#005C6D, #005C6D);">한국가스공사는 데이터를 기반으로 AI를 키우고, 분석을 고도화하며, 궁극적으로 AI가 의사결정을 지원하는 운영체계를 구축해 나가고 있습니다.</span><br>
+                        단계적인 혁신은 더 안전하고 안정적인 천연가스 공급으로 이어질 것입니다.
+                    </p>
+                </div>
+                <div class="article-content">
+                    
+                </div>
+            </div>
+        </article>
+        <div class="step-list">
+            
+        </div>
+        <article>
+            <div class="container">
+                <div class="article-header">
+                    <h3>궁금해요,<br> AI 시대의 에너지</h3>
+                </div>
+            </div>
+        </article>
     </main>
     <!-- footer -->
     <footer id="footer">
@@ -196,9 +235,19 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="./assets/js/common.js"></script>
     <script>
+        /* earth */
         setTimeout(function(){
             $('.earth-wrap').addClass('show');
         }, 500);
+        
+        /* highlight */
+        $(window).on('scroll', function() {
+            $('.highlight').each(function(index, elem) {
+                if ($(window).scrollTop() > $(elem).offset().top - ($(window).height() / 1.3)) {
+                    $(elem).addClass('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>

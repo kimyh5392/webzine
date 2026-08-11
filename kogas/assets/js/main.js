@@ -1,43 +1,63 @@
 // intro 관련
 gsap.registerPlugin(ScrollTrigger);
 
+// 텍스트는 처음에 안 보이게
+gsap.set(".jumbotron .details .effect-txt", {
+    x: 100,
+    opacity: 0
+});
+
 const tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".jumbotron",
         start: "top top",
-        end: "+=100%",
+        end: "+=200%",
         scrub: true,
         pin: true,
-        anticipatePin: 1
+        anticipatePin: 1,
+        onLeave: () => {
+            document.querySelector(".scroll-down").classList.add("hide");
+        },
+        onEnterBack: () => {
+            document.querySelector(".scroll-down").classList.remove("hide");
+        }
     }
 });
 
 tl.to("#intro .first", {
     duration: 2,
     xPercent: -100,
-    backgroundColor: '#fff'
 }, 0)
 
 .to("#intro .second", {
     duration: 2,
     xPercent: 100,
-    backgroundColor: '#fff'
 }, 0)
 
-.to("#intro .inner-box .logo-area .logo-kcolor", {
-    opacity: 1
-}, 0)
+// jumbotron 등장
+/*.from(".jumbotron", {
+    opacity: 0.3,
+    duration: 1
+}, 0.1)*/
 
-// 문이 다 열리고 난 뒤
 .from(".jumbotron", {
-    //y: 100,
-    opacity: 0.3
-}, 0.1)
+    //opacity: 0.3,
+    duration: 1
+})
 
-// 마지막에 intro 제거
+// intro 제거
 .to("#intro", {
-    autoAlpha: 0
-}, 1);
+    autoAlpha: 0,
+    duration: 0.5
+}, 2)
+
+.to(".jumbotron .details .effect-txt", {
+    x: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+    stagger: 0.6
+}, "-=0.5");
 
 // section-1 관련
 const section1 = document.querySelector(".section-1");

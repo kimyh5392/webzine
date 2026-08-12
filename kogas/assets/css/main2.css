@@ -181,7 +181,7 @@ a, button {
         #nav .container .nav-inner .gnb .gnb-header {
           position: relative;
           width: 100%; }
-          #nav .container .nav-inner .gnb .gnb-header h3 {
+          #nav .container .nav-inner .gnb .gnb-header strong {
             font-size: 24px;
             color: #051BD0;
             font-weight: bold;

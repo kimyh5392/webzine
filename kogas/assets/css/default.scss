@@ -95,6 +95,7 @@
 #nav {
     position: fixed;
     bottom: -100%;
+    visibility: hidden;
     /*bottom: 0;*/
     left: 0;
     width: 100%;
@@ -121,7 +122,8 @@
                 .gnb-header {
                     position: relative;
                     width: 100%;
-                    h3 {
+                    strong {
+                        display: block;
                         font-size: 24px;
                         color: $kcolor;
                         font-weight: bold;
@@ -336,6 +338,7 @@ body {
     &.nav-opened {
         overflow: hidden;
         #nav {
+            visibility: visible;
             bottom: 0;
         }
         .nav-backdrop {

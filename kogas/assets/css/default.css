@@ -149,6 +149,7 @@ a, button {
 #nav {
   position: fixed;
   bottom: -100%;
+  visibility: hidden;
   /*bottom: 0;*/
   left: 0;
   width: 100%;
@@ -182,7 +183,8 @@ a, button {
         #nav .container .nav-inner .gnb .gnb-header {
           position: relative;
           width: 100%; }
-          #nav .container .nav-inner .gnb .gnb-header h3 {
+          #nav .container .nav-inner .gnb .gnb-header strong {
+            display: block;
             font-size: 24px;
             color: #0B518F;
             font-weight: bold;
@@ -345,6 +347,7 @@ a, button {
 body.nav-opened {
   overflow: hidden; }
   body.nav-opened #nav {
+    visibility: visible;
     bottom: 0; }
   body.nav-opened .nav-backdrop {
     display: block; }

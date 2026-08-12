@@ -34,12 +34,6 @@ tl.to("#intro .first", {
     xPercent: 100,
 }, 0)
 
-// jumbotron 등장
-/*.from(".jumbotron", {
-    opacity: 0.3,
-    duration: 1
-}, 0.1)*/
-
 .from(".jumbotron", {
     //opacity: 0.3,
     duration: 1
@@ -56,7 +50,7 @@ tl.to("#intro .first", {
     opacity: 1,
     duration: 1,
     ease: "power2.out",
-    stagger: 0.6
+    stagger: 0.2
 }, "-=0.5");
 
 // section-1 관련

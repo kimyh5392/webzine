@@ -425,6 +425,18 @@ body {
     overflow-x: hidden;
 }
 
+@keyframes wheelMove {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 /* jumbo-lg */
 .jumbotron {
     .section-header {
@@ -576,6 +588,54 @@ body {
             }
         }
     }
+    /* scroll-down */
+    .scroll-down {
+        position: absolute;
+        bottom: 95px;
+        left: 50%;
+        opacity: 1;
+        z-index: 2;
+        text-align: center;
+        transform: translateX(-50%);
+        @include transition();
+        .mouse {
+            .wheel {
+                position: relative;
+                display: block;
+                width: 20px;
+                height: 34px;
+                margin: 0 auto;
+                border: 1px solid #051BD0;
+                border-radius: 100px;
+                .dot {
+                    position: absolute;
+                    top: 4px;
+                    left: 50%;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    margin-left: -6px;
+                    animation: wheelMove 1s ease-in-out infinite;
+                    background-color: #051BD0;
+                }
+            }
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                color: #051BD0;
+                margin-top: 10px;
+                @include gmarket();
+            }
+        }
+        @media(max-width: $md) {
+            bottom: 60px;
+            .mouse {
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
     @media(max-width: $sm) {
         display: none;
     }
@@ -666,7 +726,7 @@ body {
             width: 100%;
             border-radius: 200px;
             table-layout: fixed;
-            background-color: #E4F4FF;
+            background-color: #9AD0F8;
             dt, dd {
                 display: table-cell;
                 vertical-align: middle;
@@ -682,7 +742,7 @@ body {
                 letter-spacing: -0.4px;
                 line-height: 56px;
                 padding-left: 50px;
-                background-color: #E4F4FF;
+                background-color: #9AD0F8;
                 > img {
                     position: absolute;
                     top: 50%;

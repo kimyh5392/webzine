@@ -8,15 +8,55 @@
 
 /* sub-2 */
 .sub-2 {
+    overflow-x: hidden;
     padding-bottom: 160px;
     background-color: #00163B;
     background-repeat: no-repeat;
     background-image: url(../images/sub/bg_page_top.png);
     background-size: auto auto;
     background-position: 0 60px;
+    article {
+        .article-header {
+            h3 {
+                font-size: 26px;
+                color: #fff;
+                font-weight: 700;
+                line-height: 38px;
+                letter-spacing: -0.26px;
+            }
+            p {
+                font-size: 20px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 38px;
+                margin-top: 30px;
+            }
+        }
+        & ~ article {
+            margin-top: 100px;
+        }
+    }
     @media(max-width: $md) {
         padding-bottom: 100px;
         background: #00163B;
+        article {
+            .article-header {
+                h3 {
+                    font-size: 18px;
+                    line-height: 24px;
+                    letter-spacing: -0.54px;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 21px;
+                    letter-spacing: -0.42px;
+                    margin-top: 12px;
+                }
+            }
+            & ~ article {
+                margin-top: 60px;
+            }
+        }
     }
 }
 .pgae-intro {
@@ -283,33 +323,8 @@
     }
 }
 
-.sub-2 {
-    article {
-        .article-header {
-            h3 {
-                font-size: 26px;
-                color: #fff;
-                font-weight: 700;
-                line-height: 38px;
-                letter-spacing: -0.26px;
-            }
-            p {
-                font-size: 20px;
-                color: #fff;
-                font-weight: 400;
-                line-height: 38px;
-                margin-top: 30px;
-            }
-        }
-        & ~ article {
-            margin-top: 100px;
-        }
-    }
-}
-
 /* highlight */
 .highlight {
-    /*background-image: linear-gradient(#4B6097, #4B6097);*/
     background-repeat: no-repeat;
     background-size: 0% 100%;
     background-position: 0% 0%;
@@ -318,6 +333,845 @@
         background-size: 100% 100%;
     }
 }
+
+@keyframes txtMove {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-1 {
+    overflow: hidden;
+    .article-content {
+        padding-top: 40px;
+        .tab-area {
+            overflow: hidden;
+            > ol {
+                display: table;
+                width: calc(100% + 50px);
+                table-layout: fixed;
+                margin: 0 -25px;
+                > li {
+                    position: relative;
+                    left: -40px;
+                    opacity: 0;
+                    display: table-cell;
+                    vertical-align: top;
+                    padding: 0 25px;
+                    > a {
+                        position: relative;
+                        z-index: 1;
+                        display: block;
+                        opacity: .5;
+                        padding: 20px;
+                        border-radius: 10px;
+                        border: 1px solid #5D4EB5;
+                        @include transition();
+                        background-color: #00163B;
+                        > figure {
+                            img {
+                                display: block;
+                                max-width: 100%;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                    &.active {
+                        > a {
+                            opacity: 1;
+                        }
+                    }
+                    &:after {
+                        position: absolute;
+                        top: 50%;
+                        right: 32px;
+                        width: 16px;
+                        height: 23px;
+                        opacity: 0;
+                        content: '';
+                        display: block;
+                        transform: translateY(-50%);
+                        background-image: url(../images/sub/ico_article01_next_arrow.png);
+                        background-repeat: no-repeat;
+                        background-size: auto auto;
+                        background-position: 0 0;
+                    }
+                    &:nth-of-type(1) {
+                        @include transition($duration: .3s);
+                        &:after {
+                            @include transition($duration: .3s, $delay: .2s);
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        @include transition($duration: .3s, $delay: .5s);
+                        &:after {
+                            @include transition($duration: .3s, $delay: .7s);
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        @include transition($duration: .3s, $delay: 1s);
+                        &:after {
+                            @include transition($duration: .3s, $delay: 1.2s);
+                        }
+                    }
+                    &:nth-of-type(4) {
+                        @include transition($duration: .3s, $delay: 1.5s);
+                    }
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .tab-content {
+                position: relative;
+                top: 40px;
+                opacity: 0;
+                @include transition($duration: .3s, $delay: 2s);
+                padding-top: 20px;
+                .tab-pane {
+                    display: none;
+                    > dl {
+                        > dt, dd {
+                            opacity: 0;
+                            transform: translateY(20px);
+                        }
+                        dt {
+                            color: #00FFE1;
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 38px;
+                            letter-spacing: -0.4px;
+                        }
+                        dd {
+                            font-size: 20px;
+                            color: #fff;
+                            font-weight: 600;
+                            line-height: 34px;
+                            letter-spacing: -0.4px;
+                            margin-top: 20px;
+                        }
+                    }
+                    &.active {
+                        display: block;
+                        > dl {
+                            > dt {
+                                animation: txtMove 0.6s ease forwards;
+                            }
+                            > dd {
+                                animation: txtMove 0.6s ease 0.15s forwards;
+                            }
+                        }
+                    }
+                }
+            }
+            &.active {
+                > ol {
+                    > li {
+                        left: 0;
+                        opacity: 1;
+                        &:after {
+                            right: -8px;
+                            opacity: 1;
+                        }
+                    }
+                }
+                .tab-content {
+                    top: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    @media(max-width: $md) {
+        .article-content {
+            .tab-area {
+                > ol {
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                    overflow: hidden;
+                    > li {
+                        display: block;
+                        float: left;
+                        width: 50%;
+                        > a {
+                            padding: 10px 0;
+                            > figure {
+                                img {
+                                    width: 96px;
+                                }
+                            }
+                        }
+                        &:after {
+                            background-size: 8px auto;
+                            background-position: 50% 50%;
+                        }
+                        &:nth-of-type(2) ~ li {
+                            margin-top: 20px;
+                        }
+                        &:nth-of-type(2n + 1) {
+                            clear: left;
+                            padding: 0 15px 0 0 !important;
+                        }
+                        &:nth-of-type(2n + 2) {
+                            padding: 0 0 0 15px !important;
+                        }
+                        &:nth-of-type(2n + 2) {
+                            &:after {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+                .tab-content {
+                    .tab-pane {
+                        > dl {
+                            > dt {
+                                font-size: 14px;
+                                line-height: 21px;
+                                letter-spacing: -0.42px;
+                            }
+                            > dd {
+                                font-size: 14px;
+                                line-height: 21px;
+                                letter-spacing: -0.42px;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* article-2 */
+.article-2 {
+    overflow: hidden;
+    .container {
+        .article-content {
+            padding-top: 40px;
+            .step-list {
+                text-align: center;
+                font-size: 0;
+                max-width: 1092px;
+                margin: 0 auto;
+                > li {
+                    position: relative;
+                    left: -40px;
+                    opacity: 0;
+                    display: inline-block;
+                    width: 25%;
+                    vertical-align: top;
+                    padding: 0 20px;
+                    figure {
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                    > a {
+                        opacity: .5;
+                        display: block;
+                        @include transition();
+                    }
+                    .details-list {
+                        opacity: 0;
+                        margin-top: 30px;
+                        > ul {
+                            text-align: left;
+                            > li {
+                                font-size: 20px;
+                                color: #fff;
+                                font-weight: 600;
+                                line-height: 34px;
+                                letter-spacing: -0.4px;
+                                opacity: 0;
+                                transform: translateY(20px);
+                            }
+                        }
+                    }
+                    &:after {
+                        position: absolute;
+                        top: calc(50% - 66px);
+                        right: 32px;
+                        width: 16px;
+                        height: 23px;
+                        display: block;
+                        content: '';
+                        transform: translateY(-50%);
+                        background-image: url(../images/sub/ico_article02_next_arrow01.png);
+                        background-repeat: no-repeat;
+                        background-position: 0 0;
+                        background-size: auto auto;
+                    }
+                    &:nth-of-type(1) {
+                        @include transition($duration: .3s);
+                        &:after {
+                            display: none !important;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        @include transition($duration: .3s, $delay: .3s);
+                        &:after {
+                            @include transition($duration: .3s, $delay: .5s);
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        @include transition($duration: .3s, $delay: .8s);
+                        &:after {
+                            background-image: url(../images/sub/ico_article02_next_arrow02.png);
+                            @include transition($duration: .3s, $delay: 1s);
+                        }
+                    }
+                    &:nth-of-type(4) {
+                        @include transition($duration: .3s, $delay: 1.3s);
+                    }
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    &.active {
+                        > a {
+                            opacity: 1;
+                        }
+                        .details-list {
+                            opacity: 1;
+                            > ul {
+                                > li {
+                                    &:nth-of-type(1) {
+                                        animation: txtMove 0.6s ease forwards;
+                                    }
+                                    &:nth-of-type(2) {
+                                        animation: txtMove 0.6s ease 0.15s forwards;
+                                    }
+                                    &:nth-of-type(3) {
+                                        animation: txtMove 0.6s ease 0.3s forwards;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.active {
+                    > li {
+                        left: 0;
+                        opacity: 1;
+                        &:nth-of-type(1) {
+                            opacity: 1 !important;
+                        }
+                        &:after {
+                            opacity: 1;
+                            right: -8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: $lg) {
+        .container {
+            .article-content {
+                padding-top: 40px;
+                .step-list {
+                    > li {
+                        .details-list {
+                            > ul {
+                                > li {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: $md) {
+        .container {
+            .article-content {
+                padding-top: 40px;
+                .step-list {
+                    > li {
+                        padding: 0 10px;
+                        &:after {
+                            display: none !important;
+                        }
+                        &:nth-of-type(1) {
+                            @include transition($duration: .3s);
+                        }
+                        &:nth-of-type(2) {
+                            @include transition($duration: .3s, $delay: .3s);
+                        }
+                        &:nth-of-type(3) {
+                            @include transition($duration: .3s, $delay: .6s);
+                        }
+                        &:nth-of-type(4) {
+                            @include transition($duration: .3s, $delay: .9s);
+                        }
+                        .details-list {
+                            margin-top: 20px;
+                            > ul {
+                                > li {
+                                    font-size: 13px;
+                                    line-height: 21px;
+                                    letter-spacing: -0.39px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: $sm) {
+        .container {
+            .article-content {
+                .step-list {
+                    overflow: hidden;
+                    width: calc(100% + 16px);
+                    margin: 0 -8px;
+                    > li {
+                        float: left;
+                        width: 50%;
+                        padding: 0 8px;
+                        &:after {
+                            display: none !important;
+                        }
+                        &:nth-of-type(2n + 1) {
+                            clear: left;
+                        }
+                        &:nth-of-type(2) ~ li {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes boatMove {
+    0%,
+    100% {
+        transform: translateX(-10px) translateY(0) rotate(-0.3deg);
+    }
+
+    50% {
+        transform: translateX(10px) translateY(-1px) rotate(0.3deg);
+    }
+}
+
+
+/* lng-area */
+.lng-area {
+    overflow: hidden;
+    padding: 170px 0 120px;
+    .lng-wrap {
+        position: relative;
+        .lng {
+            position: absolute;
+            right: 100%;
+            top: 0;
+            display: block;
+            width: 30000px;
+            height: 6px;
+            @include transition($duration: 6s, $timing: cubic-bezier(0.22, 1, 0.36, 1));
+            background-image: url(../images/sub/img_wave.png);
+            background-repeat: repeat-x;
+            background-position: 100% 100%;
+            background-size: auto auto;
+            > div {
+                position: relative;
+                display: block;
+                img {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    max-width: 100%;
+                    transform-origin: 50% 100%;
+                }
+            }
+        }
+        .wave {
+            position: absolute;
+            left: 100%;
+            bottom: 0;
+            display: block;
+            width: 30000px;
+            height: 6px;
+            @include transition($duration: 6s, $timing: cubic-bezier(0.22, 1, 0.36, 1));
+            background-image: url(../images/sub/img_wave.png);
+            background-repeat: repeat-x;
+            background-position: 0 0;
+            background-size: auto auto;
+        }
+        .container {
+            > ol {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                > li {
+                    position: relative;
+                    color: #00FFDE;
+                    font-size: 26px;
+                    font-weight: 700;
+                    line-height: 34px;
+                    letter-spacing: -0.52px;
+                    line-height: 80px;
+                    opacity: 0;
+                    transform: translateX(-50px);
+                    transition: opacity 0.6s ease, transform 0.6s ease;
+                    @for $i from 1 through 30 {
+                        &:nth-child(#{$i}) {
+                            transition-delay: #{2s + ($i - 1) * 0.3s};
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.active {
+        .lng-wrap {
+            .lng {
+                right: max(0px, calc(50% - 640px));
+                > div {
+                    img {
+                        animation: boatMove 5s ease-in-out 1.05s infinite;
+                    }
+                }
+            }
+            .wave {
+                left: max(0px, calc(50% - 640px));
+            }
+            .container {
+                > ol {
+                    > li {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: $md) {
+        padding: 105px 0 60px;
+        .lng-wrap {
+            .lng {
+                > div {
+                    img {
+                        width: 120px;
+                    }
+                }
+            }
+            .container {
+                text-align: center;
+                > ol {
+                    display: inline-block;
+                    padding: 10px 0;
+                    display: block;
+                    overflow: hidden;
+                    > li {
+                        float: left;
+                        margin-right: 20px;
+                        font-size: 14px;
+                        line-height: 34px;
+                        @for $i from 1 through 30 {
+                            &:nth-child(#{$i}) {
+                                transition-delay: #{0.6s + ($i - 1) * 0.3s};
+                            }
+                        }
+                        img {
+                            width: 14px;
+                        }
+                        &:nth-of-type(5) {
+                            margin-right: 0;
+                        }
+                        &:nth-of-type(6) {
+                            clear: left;
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &.active {
+            .lng-wrap {
+                .lng {
+                    right: 15px;
+                    > div {
+                        img {
+                            animation: boatMove 2s ease-in-out 1.6s infinite;
+                        }
+                    }
+                }
+                .wave {
+                    left: 15px;
+                }
+            }
+        }
+    }
+}
+
+/* article-3 */
+.article-3 {
+    margin-top: 0 !important;
+    .container {
+        .article-content {
+            padding-top: 55px;
+            .visible-lg {
+                max-width: 1070px;
+                margin: 0 auto;
+                .qna-list {
+                    > li {
+                        position: relative;
+                        overflow: hidden;
+                        .answer {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            cursor: pointer;
+                            width: 66.666%;
+                            height: 100%;
+                            overflow: hidden;
+                            > div {
+                                position: absolute;
+                                right: 0;
+                                opacity: .6;
+                                width: 0;
+                                overflow: hidden;
+                                z-index: 2;
+                                height: 100%;
+                                transform-origin: 0 0;
+                                @include transition($duration: .3s, $timing: ease-in-out);
+                                border: 1px solid #000;
+                                background-color: #00FFE1;
+                                > div {
+                                    padding: 20px;
+                                }
+                                b {
+                                    display: block;
+                                    color: #000;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    line-height: 28px;
+                                    letter-spacing: -0.18px;
+                                }
+                                p {
+                                    font-size: 18px;
+                                    color: #000;
+                                    font-weight: 300;
+                                    line-height: 28px;
+                                    letter-spacing: -0.18px;
+                                }
+                            }
+                        }
+                        > ul {
+                            display: table;
+                            width: 100%;
+                            height: 100%;
+                            table-layout: fixed;
+                            > li {
+                                display: table-cell;
+                                width: 33.333%;
+                                vertical-align: top;
+                                border: 1px solid #000;
+                                img {
+                                    display: block;
+                                    max-width: 100%;
+                                }
+                                .btn-question {
+                                    position: relative;
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    padding: 20px;
+                                    z-index: 1;
+                                    text-align: left;
+                                    background-color: #fff;
+                                    p {
+                                        font-size: 20px;
+                                        font-weight: 600;
+                                        line-height: 28px;
+                                        vertical-align: top;
+                                        letter-spacing: -0.2px;
+                                    }
+                                }
+                                &.type-2 {
+                                    position: relative;
+                                    &:after {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 50%;
+                                        width: 2px;
+                                        height: 100%;
+                                        margin-left: -1px;
+                                        content: '';
+                                        background-color: #000;
+                                    }
+                                }
+                            }
+                        }
+                        &.active {
+                            .answer {
+                                > div {
+                                    width: 100%;
+                                    left: 0;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            .answer {
+                                left: 33.333%;
+                            }
+                        }
+                        &:nth-of-type(4) {
+                            .answer {
+                                left: 33.333%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: $lg) {
+        .container {
+            .article-content {
+                .visible-lg {
+                    .qna-list {
+                        > li {
+                            .answer {
+                                > div {
+                                    > div {
+                                        b {
+                                            font-size: 16px;
+                                            line-height: 1.4;
+                                        }
+                                        p {
+                                            font-size: 16px;
+                                            line-height: 1.4;
+                                        }
+                                    }
+                                }
+                            }
+                            > ul {
+                                > li {
+                                    .btn-question {
+                                        p {
+                                            font-size: 18px;
+                                            line-height: 1.4;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: $lg) {
+        .container {
+            .article-content {
+                padding-top: 40px;
+                .visible-sm {
+                    .accordion-list {
+                        > li {
+                            overflow: hidden;
+                            .btn-accordion {
+                                position: relative;
+                                display: block;
+                                padding: 20px 45px 20px 20px;
+                                background-color: #fff;
+                                p {
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    line-height: 18px;
+                                    letter-spacing: -.2px;
+                                }
+                                .ico-arrow {
+                                    position: absolute;;
+                                    top: 50%;
+                                    right: 20px;
+                                    display: block;
+                                    transform: translateY(-50%);
+                                    img {
+                                        display: block;
+                                        @include transition();
+                                        max-width: 18px;
+                                    }
+                                }
+                                &.active {
+                                    .ico-arrow {
+                                        img {
+                                            transform: translateY(-50%) rotate(180deg);
+                                        }
+                                    }
+                                }
+                            }
+                            .accordion-answer {
+                                display: none;
+                                font-size: 0;
+                                transform-origin: 0 0;
+                                > div {
+                                    font-size: 14px;
+                                    color: #000;
+                                    line-height: 1.4;
+                                    letter-spacing: -.2px;
+                                    padding: 20px;
+                                    background-color: #00FFE1;
+                                    b {
+                                        display: block;
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                    }
+                                    p {
+                                        font-weight: 400;
+                                        margin-top: 5px;
+                                    }
+                                }
+                                > figure {
+                                    img {
+                                        display: block;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            & ~ li {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

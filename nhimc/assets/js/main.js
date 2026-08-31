@@ -55,6 +55,10 @@ var etcSwiper = new Swiper('.etc-swiper', {
         delay: 6000,
         disableOnInteraction: false,
     },
+    navigation: {
+        prevEl: '.etc-prev',
+        nextEl: '.etc-next',
+    },
     pagination: {
         el: '.etc-pagination',
         clickable: true,

@@ -151,6 +151,10 @@ a, button {
             letter-spacing: -0.36px;
             margin-top: 20px;
             transform: translateY(20px); }
+    .jumbotron .jumbo-swiper .swiper-wrapper .swiper-slide.slider-2 {
+      background-image: url(../images/main/bg_jumbotron02.png); }
+    .jumbotron .jumbo-swiper .swiper-wrapper .swiper-slide.slider-3 {
+      background-image: url(../images/main/bg_jumbotron03.png); }
     .jumbotron .jumbo-swiper .swiper-wrapper .swiper-slide.swiper-slide-active > a .container-fluid .v-align small {
       animation: move 0.6s ease .3s forwards; }
     .jumbotron .jumbo-swiper .swiper-wrapper .swiper-slide.swiper-slide-active > a .container-fluid .v-align h3 {
@@ -245,6 +249,10 @@ a, button {
           .jumbotron .jumbo-swiper .swiper-wrapper .swiper-slide > a .container-fluid .v-align p {
             font-size: 16px;
             line-height: 1.4; }
+    .jumbotron .jumbo-swiper .swiper-wrapper .swiper-slide.slider-2 {
+      background-image: url(../images/main/bg_jumbotron02_sm.png); }
+    .jumbotron .jumbo-swiper .swiper-wrapper .swiper-slide.slider-3 {
+      background-image: url(../images/main/bg_jumbotron03_sm.png); }
     .jumbotron .controls {
       bottom: 20px;
       left: 50%;
@@ -586,24 +594,26 @@ a, button {
         right: 0px;
         z-index: 1; }
   @media (max-width: 1024px) {
-    .cheer-msg .cheer-header {
-      padding-top: 0;
-      text-align: center; }
-      .cheer-msg .cheer-header h3 {
-        line-height: 90px; }
-    .cheer-msg .msg-list .container-fluid {
-      padding: 0; }
-      .cheer-msg .msg-list .container-fluid > dl {
-        height: 46px; }
-        .cheer-msg .msg-list .container-fluid > dl > dt {
-          width: 40px; }
-          .cheer-msg .msg-list .container-fluid > dl > dt img {
-            width: 30px; }
-        .cheer-msg .msg-list .container-fluid > dl > dd span {
-          font-size: 16px;
-          line-height: 46px; }
-        .cheer-msg .msg-list .container-fluid > dl > dd:after {
-          display: none; } }
+    .cheer-msg {
+      padding-top: 0; }
+      .cheer-msg .cheer-header {
+        padding-top: 0;
+        text-align: center; }
+        .cheer-msg .cheer-header h3 {
+          line-height: 90px; }
+      .cheer-msg .msg-list .container-fluid {
+        padding: 0; }
+        .cheer-msg .msg-list .container-fluid > dl {
+          height: 46px; }
+          .cheer-msg .msg-list .container-fluid > dl > dt {
+            width: 40px; }
+            .cheer-msg .msg-list .container-fluid > dl > dt img {
+              width: 30px; }
+          .cheer-msg .msg-list .container-fluid > dl > dd span {
+            font-size: 16px;
+            line-height: 46px; }
+          .cheer-msg .msg-list .container-fluid > dl > dd:after {
+            display: none; } }
 
 /* circle common */
 .circle {
@@ -912,7 +922,7 @@ a, button {
             transform: translate(-10px, -10px); } }
   @media (max-width: 1024px) {
     .section-3 {
-      padding: 60px 0 70px; }
+      padding: 30px 0 40px; }
       .section-3 .container > ul {
         display: none; }
       .section-3 .container .lounge-swiper .swiper-wrapper .swiper-slide > a {

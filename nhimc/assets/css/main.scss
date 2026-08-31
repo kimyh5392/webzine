@@ -93,6 +93,12 @@
                         }
                     }
                 }
+                &.slider-2 {
+                    background-image: url(../images/main/bg_jumbotron02.png);
+                }
+                &.slider-3 {
+                    background-image: url(../images/main/bg_jumbotron03.png);
+                }
                 &.swiper-slide-active {
                     > a {
                         .container-fluid {
@@ -228,6 +234,12 @@
                                 }
                             }
                         }
+                    }
+                    &.slider-2 {
+                        background-image: url(../images/main/bg_jumbotron02_sm.png);
+                    }
+                    &.slider-3 {
+                        background-image: url(../images/main/bg_jumbotron03_sm.png);
                     }
                 }
             }
@@ -674,6 +686,7 @@
         }
     }
     @media(max-width: $md) {
+        padding-top: 0;
         .cheer-header {
             padding-top: 0;
             text-align: center;
@@ -1086,7 +1099,7 @@
         }
     }
     @media(max-width: $md) {
-        padding: 60px 0 70px;
+        padding: 30px 0 40px;
         .container {
             > ul {
                 display: none;

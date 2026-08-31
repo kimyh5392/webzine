@@ -11,6 +11,12 @@ body {
             display: block;
         }
     }
+    &.intro-skip {
+        .intro {
+            display: none !important;
+            animation: none !important;
+        }
+    }
     @media(max-width: $md) {
         padding-top: 60px;
     }
@@ -391,10 +397,6 @@ body {
         background-position: 50% 50%;
         background-size: cover;
     }
-    @media(max-width: $md) {
-        top: 60px;
-        height: calc(100vh - 60px);
-    }
 }
 
 @keyframes textFadeUp {
@@ -413,75 +415,11 @@ body {
 /* content-wrap */
 .content-wrap {
     padding-left: 480px;
-    //opacity: 0;
-    @include transition($timing: cubic-bezier(0.4, 0, 0.2, 1), $duration: .3s);
-    .cover {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 480px;
-        z-index: 2;
-        height: calc(100vh - 70px);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50% 50%;
-        .summary {
-            position: relative;
-            width: 100%;
-            padding-top: 110px;
-            text-align: center;
-            p {
-                @include gb();
-                opacity: 0;
-                font-size: 26.067px;
-                color: #fff;
-                font-weight: 700;
-                line-height: 38px;
-                letter-spacing: -0.521px;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-                & ~ p {
-                    margin-top: 30px;
-                }
-            }
-        }
-    }
-    &.show {
-        opacity: 1;
-        .cover {
-            .summary {
-                p {
-                    animation: textFadeUp 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-                    & ~ p {
-                        animation-delay: .3s;
-                    }
-                }
-            }
-        }
-    }
     @media(max-width: $xl) {
         padding-left: 400px;
-        .cover {
-            width: 400px;
-        }
     }
     @media(max-width: $md) {
         padding-left: 0;
-        .cover {
-            position: static;
-            width: 100%;
-            height: calc(100vh - 60px);
-            background-position: 50% 80%;
-            .summary {
-                p {
-                    font-size: 16px;
-                    line-height: 23px;
-                    letter-spacing: -.3px;
-                    & ~ p {
-                        margin-top: 20px;
-                    }
-                }
-            }
-        }
     }
 }
 #content {
@@ -489,6 +427,72 @@ body {
     .container {
         max-width: 100%;
         padding: 0;
+    }
+    @media(max-width: $md) {
+        padding: 0 15px;
+        .container {
+        }
+    }
+}
+
+/* cover */
+.cover {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 480px;
+    z-index: 2;
+    height: calc(100vh - 70px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    .summary {
+        position: relative;
+        width: 100%;
+        padding-top: 110px;
+        text-align: center;
+        p {
+            @include gb();
+            opacity: 0;
+            font-size: 26.067px;
+            color: #fff;
+            font-weight: 700;
+            line-height: 38px;
+            letter-spacing: -0.521px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+            & ~ p {
+                margin-top: 30px;
+            }
+        }
+    }
+    &.show {
+        .summary {
+            p {
+                animation: textFadeUp 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+                & ~ p {
+                    animation-delay: .3s;
+                }
+            }
+        }
+    }
+    @media(max-width: $xl) {
+        width: 400px;
+    }
+    @media(max-width: $md) {
+        position: static;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-position: 50% 80%;
+        .summary {
+            p {
+                font-size: 16px;
+                line-height: 23px;
+                letter-spacing: -.3px;
+                & ~ p {
+                    margin-top: 20px;
+                }
+            }
+        }
     }
 }
 
@@ -596,12 +600,185 @@ body {
     }
 }
 
+@keyframes swipe {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
+/* cheer-msg */
+.cheer-msg {
+    overflow: hidden;
+    .container {
+        > dl {
+            display: table;
+            width: 100%;
+            height: 56px;
+            @include ibm();
+            table-layout: fixed;
+            background-color: #E4F4FF;
+            border-radius: 100px;
+            > dt, dd {
+                display: table-cell;
+                height: 100%;
+                vertical-align: middle;
+            }
+            > dt {
+                width: 135px;
+                font-size: 20px;
+                color: #1C2B49;
+                font-weight: 500;
+                letter-spacing: -0.4px;
+                padding-left: 20px;
+            }
+            > dd {
+                position: relative;
+                overflow: hidden;
+                white-space: nowrap;
+                font-size: 0;
+                span {
+                    display: inline-block;
+                    vertical-align: top;
+                    color: #204566;
+                    font-size: 20px;
+                    font-weight: 500;
+                    letter-spacing: -0.4px;
+                    line-height: 56px;
+                    animation: swipe 300s linear infinite;
+                }
+            }
+        }
+    }
+    @media(max-width: $md) {
+        margin-top: 20px;
+        .container {
+            > dl {
+                height: 44px;
+                > dt {
+                    width: 44px;
+                    padding: 0 10px;
+                    span {
+                        display: none;
+                    }
+                }
+                > dd {
+                    span {
+                        font-size: 14px;
+                        line-height: 44px;
+                    }
+                }
+            }
+        }
+    }
+}
 
+section {
+    padding: 60px 0;
+    .container {
+        display: table;
+        width: 100%;
+        height: 100%;
+        table-layout: fixed;
+        > div {
+            display: table-cell;
+            vertical-align: top;
+            height: 100%;
+            &.section-header {
+                width: 33.929%;   
+            }
+            &.section-content {
+                > a {
+                    display: block;
+                    > figure {
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & ~ section {
+        border-top: 1px solid #000;
+    }
+    @media(max-width: $md) {
+        .container {
+            display: block;
+            > div {
+                display: block;
+                width: 100% !important;
+            }
+        }
+    }
+}
 
+/* section-header */
+.section-header {
+    position: relative;
+    small {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+        color: #fff;
+        padding: 0 15px;
+        border-radius: 100px;
+        background-color: #35A4D8;
+    }
+    h3 {
+        display: block;
+        font-size: 30px;
+        color: #000;
+        font-weight: 600;
+        line-height: 44px;
+        letter-spacing: -0.6px;
+        margin-top: 20px;
+    }
+    p {
+        font-size: 16px;
+        color: #515151;
+        @include ibm();
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.48px;
+        margin-top: 10px;
+    }
+    .btn-area {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        .btn-more {
+            display: inline-block;
+            line-height: 30px;
+            color: #000;
+            font-size: 20px;
+            font-weight: 300;
+            padding: 0 15px;
+            border-radius: 100px;
+            border: 1px solid #000;
+            @include transition();
+            background-color: #fff;
+            &:hover {
+                color: #fff;
+                background-color: #35A4D8;
+                border-color: #35A4D8;
+            }
+        }
+    }
+}
 
-
-
+/* station */
+.station {
+    .container {
+        .swiper-wrapper {
+            
+        }
+    }
+}
 
 
 

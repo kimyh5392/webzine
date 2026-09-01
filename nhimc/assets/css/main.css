@@ -592,7 +592,8 @@ a, button {
         position: absolute;
         bottom: 0;
         right: 0px;
-        z-index: 1; }
+        z-index: 1;
+        width: 215px; }
   @media (max-width: 1024px) {
     .cheer-msg {
       padding-top: 0; }

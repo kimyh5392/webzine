@@ -315,7 +315,7 @@ body {
   top: 70px;
   right: -100%;
   width: 100%;
-  max-width: 360px;
+  max-width: 460px;
   overflow-y: auto;
   height: calc(100vh - 70px);
   z-index: 10;
@@ -354,15 +354,22 @@ body {
           border-radius: 100px;
           border: 1px solid #88B1FF; }
         #nav .container > ul > li > dl dd > ul > li > a > div p {
+          overflow: hidden;
+          display: block;
           color: #FFF;
           font-size: 14px;
           font-weight: 600;
-          line-height: 20px; }
+          line-height: 20px;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+          #nav .container > ul > li > dl dd > ul > li > a > div p br {
+            display: none !important; }
         #nav .container > ul > li > dl dd > ul > li > a > div:first-child {
           white-space: nowrap;
           padding-right: 6px; }
         #nav .container > ul > li > dl dd > ul > li > a > div:last-child {
-          padding-left: 6px; }
+          padding-left: 6px;
+          overflow: hidden; }
     #nav .container > ul > li ~ li {
       margin-top: 30px; }
   @media (max-width: 1024px) {

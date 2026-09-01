@@ -280,7 +280,7 @@ body {
     top: 70px;
     right: -100%;
     width: 100%;
-    max-width: 360px;
+    max-width: 460px;
     overflow-y: auto;
     height: calc(100vh - 70px);
     z-index: 10;
@@ -320,10 +320,17 @@ body {
                                             border: 1px solid #88B1FF;
                                         }
                                         p {
+                                            overflow: hidden;
+                                            display: block;
                                             color: #FFF;
                                             font-size: 14px;
                                             font-weight: 600;
                                             line-height: 20px;
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
+                                            br {
+                                                display: none !important;
+                                            }
                                         }
                                         &:first-child {
                                             white-space: nowrap;
@@ -331,6 +338,7 @@ body {
                                         }
                                         &:last-child {
                                             padding-left: 6px;
+                                            overflow: hidden;
                                         }
                                     }
                                 }
